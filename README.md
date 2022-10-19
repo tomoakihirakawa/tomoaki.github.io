@@ -26,6 +26,8 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
+![](https://www.youtube.com/watch?v=1_pMhEgQ4BY)
+
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
 ### Jekyll Themes
