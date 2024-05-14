@@ -1,0 +1,939 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../research_FLOWTING_WIND/">
+      
+      
+        <link rel="next" href="../research_fish/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+    
+    
+      
+        <title>🎓Moon Poolの共振周波数 - 数値解析を使った研究</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#background" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="数値解析を使った研究" class="md-header__button md-logo" aria-label="数値解析を使った研究" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数値解析を使った研究
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🎓Moon Poolの共振周波数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="数値解析を使った研究" class="md-nav__button md-logo" aria-label="数値解析を使った研究" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    数値解析を使った研究
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    <strong><u>Structures</u></strong>
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            <strong><u>Structures</u></strong>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_beam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓梁のDAF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_cable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ケーブルの力学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_cable_mooring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    係留策
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    <strong><u>Fluid</u></strong>
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            <strong><u>Fluid</u></strong>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_FLOWTING_WIND/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓浮体洋上風力発電
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    🎓Moon Poolの共振周波数
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    🎓Moon Poolの共振周波数
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ムーンプールの利用例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ムーンプール内部の水面の共振理論
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ムーンプール内部の水面の共振理論">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#molin-b-2001" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molin, B. (2001)の理論
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#molin-b-2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molin, B. (2018)の理論（有限水深と有限サイズの梁の考慮）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposing-research-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proposing Research Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proposing Research Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#title-bem-mel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Title : ムーンプール共振周波数のBEM-MEL解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      Title : ピッチ動揺に対するムーンプール水面の応答
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_fish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓魚の泳法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_wave/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓波制御構造物
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_SPH/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    粒子法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_BEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    境界要素法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ムーンプールの利用例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ムーンプール内部の水面の共振理論
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ムーンプール内部の水面の共振理論">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#molin-b-2001" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molin, B. (2001)の理論
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#molin-b-2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      Molin, B. (2018)の理論（有限水深と有限サイズの梁の考慮）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposing-research-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proposing Research Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proposing Research Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#title-bem-mel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Title : ムーンプール共振周波数のBEM-MEL解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      Title : ピッチ動揺に対するムーンプール水面の応答
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>🎓Moon Poolの共振周波数</h1>
+
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<h3 id="_1">ムーンプールの利用例<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>海洋調査: サンプルやデータ収集装置を海中に降下させる際に使用される．<ul>
+<li><a href="https://www.revocean.org/vessel/moonpool/">RevOceanのムーンプール</a></li>
+</ul>
+</li>
+<li>ダイビングサポート: ダイバーが直接海中に入る際の出入口として，または潜水艇を海中に降ろすために使用される．</li>
+<li>海洋建設: パイプラインの敷設や海底設備の設置など，重い構造物を海中に安全に設置するために利用される．<ul>
+<li>船の推進効率を落とさずに，むしろ向上させるようなムーンプールも考えられている．<a href="https://www.offshore-energy.biz/gustomscs-drillship-moonpool-design-wins-innovation-award/">GustoMSC社の設計したドリルシップのムーンプール</a>．</li>
+</ul>
+</li>
+<li>最近では，浮体式風力発電の動揺を抑えるためにムーンプールを利用する研究が行われている．<ul>
+<li><a href="https://www.google.com/search?sca_esv=4b05976ec6fa0ef5&amp;sca_upv=1&amp;sxsrf=ADLYWIJQ0XvGToxV7iP7imtewzdTFQEk-Q:1715646978257&amp;q=damping+pool+floating+wind&amp;spell=1&amp;sa=X&amp;ved=2ahUKEwj7tMuF84uGAxV1b_UHHT2EBWwQBSgAegQIPhAB&amp;biw=1440&amp;bih=2448&amp;dpr=2#fpstate=ive&amp;vld=cid:455ac4bd,vid:LJJ5pzO7sD0,st:0">BW Ideol社の浮体式風力発電ダンピングプール紹介動画</a></li>
+</ul>
+</li>
+</ul>
+<figure>
+  <img alt="RevOceanのムーンプール7.7mx5m" src="../images/RevOcean.png" width="600" />
+  <figcaption>
+  <a href="https://www.revocean.org/vessel/moonpool/">RevOceanのムーンプール7.7mx5m</a>
+    </figcaption>
+</figure>
+<figure>
+  <img alt="GustoMSC社の設計したドリルシップのムーンプール" src="../images/GustoMSC_drillship.png" width="300" />
+  <figcaption>
+  <a href="https://www.offshore-energy.biz/gustomscs-drillship-moonpool-design-wins-innovation-award/">GustoMSC社の設計したドリルシップのムーンプール</a>
+  </figcaption>
+</figure>
+<figure>
+  <img alt="BW Ideol社の浮体式風力発電ダンピングプール" src="../images/BW_ideol.png" width="300" />
+  <figcaption>
+  <a href="https://www.google.com/search?sca_esv=4b05976ec6fa0ef5&sca_upv=1&sxsrf=ADLYWIJQ0XvGToxV7iP7imtewzdTFQEk-Q:1715646978257&q=damping+pool+floating+wind&spell=1&sa=X&ved=2ahUKEwj7tMuF84uGAxV1b_UHHT2EBWwQBSgAegQIPhAB&biw=1440&bih=2448&dpr=2#fpstate=ive&vld=cid:455ac4bd,vid:LJJ5pzO7sD0,st:0">BW Ideol社の浮体式風力発電ダンピングプール</a>
+  </figcaption>
+</figure>
+<h3 id="_2">ムーンプール内部の水面の共振理論<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h4 id="molin-b-2001">Molin, B. (2001)の理論<a class="headerlink" href="#molin-b-2001" title="Permanent link">&para;</a></h4>
+<p>Molin, B. (2001)は，矩形ムーンプール内部の水面の共振条件を理論的に示している．ただし，この共振条件は様々な仮定のもとで導かれいる．簡便な理論は扱いやすく有効である場合もあるが，仮定が成り立たない場合では，実際の共振条件と一致しない可能性がある．Molin, B. (2001)がムーンプールの共振条件の導出に用いた仮定：</p>
+<ul>
+<li>ムーンプールを持つ浮体は固定さており，動かない</li>
+<li>ムーンプールを囲む浮体は無限に大きい</li>
+<li>水面の動きを支配する理論として線形理論ポテンシャル理論を使う（非粘性非圧縮渦なし流体．さらに水面波の振幅は小さく，非線形効果は無視できる）</li>
+<li>水深は無限に深い</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">Molin, B. (2018)から引用</p>
+<p>In an earlier paper (Molin 2001), a theoretical model, based on linearized potential flow theory, was proposed to derive the natural frequencies and associated modal shapes of the piston and sloshing modes in rectangular moonpools.  <strong>This model was based on simplifying assumptions: the floating support is motionless, the water depth is infinite, and the beam and length of the support are taken to the limit where they are of infinite extent.</strong> The geometry is then equivalent to a rectangular opening in a rigid ice-sheet. The fluid domain is divided into two sub-domains: the moonpool and a semi-infinite domain below the keel line. Eigenfunction expansions are used to describe the velocity potential inside the moonpool. The connection with the flow in the lower fluid domain is ensured via an integral equation relating the velocity potential to its vertical derivative, at the base of the moonpool. Then an eigenvalue problem is formulated and solved numerically.　</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>浮体式風力発電のような比較的動揺が大きい浮体に設置されたムーンプールの共振条件としては，Molin, B. (2001)の理論は適用できない可能性が大きい．</p>
+</div>
+<h4 id="molin-b-2018">Molin, B. (2018)の理論（有限水深と有限サイズの梁の考慮）<a class="headerlink" href="#molin-b-2018" title="Permanent link">&para;</a></h4>
+<p>Molin, B. (2018)は，Molin, B. (2001)の理論を有限水深と有限サイズの梁を考慮したものに拡張している．梁の幅を無限とすることで，ピストンモードの固有周波数が過小に見積もられる傾向は，既に知られた問題だった．この理論の仮定は下の２つにまで減ったことになる．</p>
+<ul>
+<li>ムーンプールを持つ浮体は固定されており，動かない</li>
+<li>水面の動きを支配する理論として線形理論ポテンシャル理論を使う（非粘性非圧縮渦なし流体．さらに水面波の振幅は小さく，非線形効果は無視できる）</li>
+</ul>
+<p>この共振条件は，WAMITというソフトウェアを使って計算された結果と比較され，その妥当性が確認されている．</p>
+<div class="admonition quote">
+<p class="admonition-title">Molin, B. (2018)から引用</p>
+<p>2.3. Numerical results and validations<br>
+Here we present some comparisons between natural frequencies obtained with our theoretical models and natural frequencies calculated with WAMIT. We take the moonpool radius a as 10 m and its draft d as 5 m and we vary the clearance c and the outer radius b. Figure 3 shows one of the panellings used in WAMIT for b = 2 a = 20 m. In the WAMIT computations the floater is successively undergoing forced heave motion (to track the axisymmetric modes) then forced surge motion (for the antisymmetric modes). Response amplitude operators (RAOs) of the free surface elevation are obtained at selected locations in the moonpool. From peaks of the RAOs plotted versus the wave frequency, the resonant frequencies of the considered modes are derived. The frequency step is progressively refined around the peaks to increase accuracy.    </p>
+</div>
+<figure>
+  <img alt="Molin, B. (2018)の論文から引用 図3" src="../images/Molin2018_fig3.png" width="300" />
+  <img alt="Molin, B. (2018)の論文から引用 図4" src="../images/Molin2018_fig4.png" width="300" />
+  <figcaption>Molin, B. (2018)の論文から引用した図</figcaption>
+</figure>
+<h2 id="proposing-research-topics">Proposing Research Topics<a class="headerlink" href="#proposing-research-topics" title="Permanent link">&para;</a></h2>
+<h3 id="title-bem-mel">Title : ムーンプール共振周波数のBEM-MEL解析<a class="headerlink" href="#title-bem-mel" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Molin, B. (2018)の理論にも２つの仮定が課されている．ダンピングプールを持つ浮体式風車のように大きく動揺するものでは，理論が適用できない可能性がある．さらに，水面波には非線形性というものがあって，WAMITもそれを完全に考慮しているわけではない．境界要素法と混合オイラー・ラグランジュ法（BEM-MEL）を使って，ムーンプール内部を持つ構造物を強制振動させたとき，水面波の共振周波数は，WAMITやMolin, B. (2018)の理論と一致するだろうか?</p>
+</div>
+<h3 id="title">Title : ピッチ動揺に対するムーンプール水面の応答<a class="headerlink" href="#title" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Molin, B. (2001), (2018)の理論は，サージとヒーブの強制振動に対するムーンプール内部の水面の応答を考えている．しかし，ピッチ動揺に対する水面の応答は考えられていない．ピッチ動揺に対する水面の応答をBEM-MEL解析で調べることはできるだろうか?</p>
+</div>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Molin, B. (2001). On the piston and sloshing modes in moonpools. Journal of Fluid Mechanics, 430, 27–50. https://doi.org/10.1017/S0022112000002871</li>
+<li>Molin, B., Zhang, X., Huang, H., &amp; Remy, F. (2018). On natural modes in moonpools and gaps in finite depth. Journal of Fluid Mechanics, 840, 530–554. https://doi.org/10.1017/jfm.2018.69</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      
+        <script src="../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
