@@ -499,7 +499,7 @@
         
   
   <span class="md-ellipsis">
-    ケーブルの力学
+    ✅ケーブルの力学
   </span>
   
 
@@ -520,7 +520,7 @@
         
   
   <span class="md-ellipsis">
-    係留策
+    ✅係留策
   </span>
   
 
@@ -584,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research_FLOWTING_WIND/" class="md-nav__link">
+      <a href="../research_damping_pool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -693,7 +693,7 @@
         
   
   <span class="md-ellipsis">
-    境界要素法
+    ✅境界要素法
   </span>
   
 
@@ -911,6 +911,7 @@
   <h1>🎓梁のDAF</h1>
 
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p><a class="md-button md-button--primary" href="https://www.dropbox.com/scl/fo/p0n4m6tfeatt59r8636mm/AKxAyF7097utHLqtvz9-9j8?rlkey=96ugifvdt1alied0zgrbxyixq&amp;dl=0">木村　Dropbox閲覧専用リンク</a></p>
 <p>静的荷重を受ける梁の最大変位に対する動的荷重下での最大変位の比率を動的増幅係数(Dynamic Amplification Factor:DAF)と呼ぶ．これは，動的荷重が静的荷重よりも構造にどれだけ大きな影響を与えるかを定量的に表す指標であり，梁の質量を端点に集中させたSingle Dgree of Freedom(SDOF)の場合はステップ荷重に対して，DAF=２になることが知られている．また，DAF=２を上限として橋梁などは設計されることが多い．しかし，実際の構造物は質量が分散しているため，複数の自由度を持つMultiple Dgree of Freedom(MDOF)系や，梁のような連続体としてモデル化されることが多い．</p>
 <figure>
     <img alt="images/SDOF_MDOF_Beam.png" src="../images/SDOF_MDOF_Beam.png" width="70%" />
@@ -1097,7 +1098,10 @@ X(x) = D_1 e^{\beta x} + D_2 e^{-\beta x} + D_3 e^{i\beta x} + D_4 e^{-i\beta x}
 <h4 id="_7">境界条件<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>境界条件は，固定端と自由端を持つ場合を考える．固定端は<span class="arithmatex">\(x=0\)</span>，自由端は<span class="arithmatex">\(x=\ell\)</span>とする．固定端では，変位<span class="arithmatex">\(y\)</span>と曲げモーメントがゼロになる．</p>
 <p><a href="../items/%E6%9B%B2%E3%81%91%E3%82%99%E6%8C%AF%E5%8B%95%E3%81%AE%E5%9F%BA%E6%9C%AC%E5%BC%8F.nb">cable/曲げ振動の基本式.nb</a></p>
-<p><img alt="曲げ振動の基本式" src="../items/hari_sindou.gif" /></p>
+<figure>
+    <img alt="梁の曲がりの時間変化" src="../items/hari_sindou.gif" width="90%" />
+    <figcaption>梁の曲がりの時間変化</figcaption>
+</figure>
 <h2 id="_8">もう少し複雑な問題<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>静的な変位がゼロではない場合を考える．上部端点に変位に比例する外力が加わる場合を考える．</p>
 <div class="arithmatex">\[\begin{align}
