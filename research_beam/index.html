@@ -937,7 +937,28 @@
 
   <h1>🎓梁のDAF</h1>
 
-<p><a class="md-button" href="https://www.dropbox.com/scl/fo/p0n4m6tfeatt59r8636mm/AKxAyF7097utHLqtvz9-9j8?rlkey=96ugifvdt1alied0zgrbxyixq&amp;dl=0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 1.807 0 5.629l6 3.822 6.001-3.822L6 1.807zm12 0-6 3.822 6 3.822 6-3.822-6-3.822zM0 13.274l6 3.822 6.001-3.822L6 9.452l-6 3.822zm18-3.822-6 3.822 6 3.822 6-3.822-6-3.822zM6 18.371l6.001 3.822 6-3.822-6-3.822L6 18.371z"/></svg></span>　木村</a></p>
+<p><a class="md-button" href="https://www.dropbox.com/scl/fo/p0n4m6tfeatt59r8636mm/AKxAyF7097utHLqtvz9-9j8?rlkey=96ugifvdt1alied0zgrbxyixq&amp;dl=0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 1.807 0 5.629l6 3.822 6.001-3.822L6 1.807zm12 0-6 3.822 6 3.822 6-3.822-6-3.822zM0 13.274l6 3.822 6.001-3.822L6 9.452l-6 3.822zm18-3.822-6 3.822 6 3.822 6-3.822-6-3.822zM6 18.371l6.001 3.822 6-3.822-6-3.822L6 18.371z"/></svg></span>　木村　颯志</a></p>
+<pre class="mermaid"><code>gantt
+    title 卒論生のスケジュール
+    dateFormat  YYYY-MM-DD
+    section 理論の理解
+    先行研究の理解            :done, 2024-06-01, 2024-06-30
+    SDOF系の方程式を解く方法を理解 :done, 2024-06-01, 2024-06-30
+    MDOF系の方程式を解く方法を理解 :done, 2024-06-01, 2024-06-30
+    DAFの捉えられ方を具体的に理解 :done, 2024-06-01, 2024-06-30
+    SDOF系の解を示し、DAF=2になることを示す :active, 2024-07-01, 2024-07-31
+    MDOF系の解法を示す            : 2024-08-01, 2024-08-31
+    連続体とした梁の動的解析の方法を理解 : 2024-09-01, 2024-09-30
+    section 計算
+    連続体とした梁の動的解析の解析結果を示す : 2024-10-01, 2024-10-31
+    DAFを比較                   : 2024-11-01, 2024-11-30
+
+    section 執筆
+    卒業論文をまとめる           : 2024-12-01, 2024-12-31
+
+    section 発表
+    卒論発表会                 : 2025-02-01, 2025-02-15
+    土木学会東北支部発表会        : 2025-03-01, 2025-03-15</code></pre>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <p>静的荷重を受ける梁の最大変位に対する動的荷重下での最大変位の比率を動的増幅係数(Dynamic Amplification Factor:DAF)と呼ぶ．これは，動的荷重が静的荷重よりも構造にどれだけ大きな影響を与えるかを定量的に表す指標であり，梁の質量を端点に集中させたSingle Dgree of Freedom(SDOF)の場合はステップ荷重に対して，DAF=２になることが知られている．また，DAF=２を上限として橋梁などは設計されることが多い．しかし，実際の構造物は質量が分散しているため，複数の自由度を持つMultiple Dgree of Freedom(MDOF)系や，梁のような連続体としてモデル化されることが多い．</p>
 <figure>
