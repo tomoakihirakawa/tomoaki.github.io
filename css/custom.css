@@ -1,0 +1,67 @@
+/* Change font size of general text content */
+.md-typeset {
+    font-size: 0.8rem; /* Default size */
+    line-height: 1; /* Line height step */
+}
+
+/* Optionally, adjust headings specifically */
+
+
+/* .md-typeset h1 {   font-size: 1.25rem;}
+.md-typeset h2 {    font-size: 1rem}
+.md-typeset h3 {    font-size: .75rem;} */
+
+/* You can continue for h4, h5, h6 if needed */
+
+.md-header {
+    background-color: hsla(229, 100%, 58%, 0.707); /* Replace with your desired color */
+}
+
+/* Maximum space for text block */
+.md-grid {
+    max-width: 100%; /* or 100%, if you want to stretch to full-width */
+  }
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid #0084ff;
+}
+
+h2 {
+    font-size: 1.75em;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #0095ffaf;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+    border-bottom: 1px solid #0191ff52;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    border-bottom: 1px solid #0191ff42;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 1em;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.md-typeset figure img {
+    display: inline;    
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.right {
+    float: right;
+}

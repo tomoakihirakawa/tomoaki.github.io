@@ -1,0 +1,1019 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../research_beam/">
+      
+      
+        <link rel="next" href="../research_cable_mooring/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+    
+    
+      
+        <title>🚧ケーブルの力学 - Research Topics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Research Topics" class="md-header__button md-logo" aria-label="Research Topics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Topics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🚧ケーブルの力学
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tomoakihirakawa/cpp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Research Topics" class="md-nav__button md-logo" aria-label="Research Topics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Research Topics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tomoakihirakawa/cpp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    <strong><u>Structures</u></strong>
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            <strong><u>Structures</u></strong>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_beam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓梁のDAF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    🚧ケーブルの力学
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    🚧ケーブルの力学
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      研究の目的・意義
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      手法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="手法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      梁の振動解析について
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ケーブルの挙動と破断に伴う衝撃力の再現について
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 梁の振動の方程式を解く方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fem" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 数値的計算(FEM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      研究の概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      研究の内容の新規性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      独創性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ケーブル破断に伴う衝撃力の再現
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ケーブル破断に伴う衝撃力の再現">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ケーブルの振動
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      ケーブルの運動方程式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_cable_mooring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🚧係留策
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    <strong><u>Fluid</u></strong>
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            <strong><u>Fluid</u></strong>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_damping_pool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓浮体洋上風力発電
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_moon_pool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓Moon Poolの共振周波数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_fish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓魚の泳法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_wave/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓波制御構造物
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_SPH/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎓粒子法(SPH)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_BEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🚧境界要素法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      研究の目的・意義
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      手法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="手法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      梁の振動解析について
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ケーブルの挙動と破断に伴う衝撃力の再現について
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 梁の振動の方程式を解く方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fem" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 数値的計算(FEM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      研究の概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      研究の内容の新規性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      独創性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ケーブル破断に伴う衝撃力の再現
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ケーブル破断に伴う衝撃力の再現">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ケーブルの振動
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      ケーブルの運動方程式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h2 id="_1">研究の目的・意義<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>ケーブルの破断に伴う衝撃力の再現，そしてその衝撃力を受ける橋梁の挙動解析は，橋梁の設計や維持管理において重要である．
+しかし，ケーブルの挙動を数値的に再現することや，衝撃力を受けた橋梁の挙動解析は，どちらも大変複雑で，未だに広くコンセンサスの取れた方法は存在しない．</p>
+<!-- 過去２０年にわたりケーブルの振動や破断に関する研究が行われてきたが，ケーブルの挙動解析のための統一した理論は静的か動的に関わらず未だ存在しない．-->
+
+<p>ケーブルの支配方程式が非線形であり，かつ悪条件であるため，精確にそして安定して解くことが難しく，そのため大胆な仮定を置いて解析することが多い．
+また，衝撃力を受ける橋梁の挙動は，微小変位の仮定に基づく梁の線形振動方程式の範疇を超える可能性が考えられるものの，このことは十分に考慮されていない．適用範囲を超えてしまっていた場合，橋梁の耐性，安全性を過大評価することになりかねないため，解析手法の適用範囲を把握しておくことが重要である．</p>
+<h2 id="_2">手法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">梁の振動解析について<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>大別して以下の２つの手法を用いて，ケーブル破断に伴う衝撃力の再現を行う：</p>
+<ol>
+<li>
+<p>解析的計算（ケーブル破断衝撃力は簡単化する必要がある）（微小変位の仮定あり）</p>
+<ul>
+<li>梁の振動の方程式を解く方法</li>
+<li>線形バネでケーブルの力を代替する</li>
+</ul>
+</li>
+<li>
+<p>数値的計算（FEM）（複雑なケーブル破断衝撃力の境界条件を課すことができる）</p>
+<ol>
+<li>梁要素（微小変位の仮定あり）</li>
+<li>梁要素（微小変位の仮定なし）</li>
+<li>四面体要素（微小変位の仮定なし，引っ張り応力の考慮も可能）</li>
+</ol>
+</li>
+</ol>
+<h3 id="_4">ケーブルの挙動と破断に伴う衝撃力の再現について<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>ケーブルのモデリング方法として，ランプドマス法や有限要素法（FEM）がある．</p>
+<p>理論に関する日本語の参考資料：</p>
+<p><a href="http://library.jsce.or.jp/Image_DB/committee/steel_structure/bklist/47254.html">鋼構造シリーズ１１　ケーブル・スペース構造の基礎と応用</a></p>
+<h2 id="1">1. 梁の振動の方程式を解く方法<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>ケーブルの力をシンプルな線形バネと仮定し，それを境界条件として，梁の振動方程式を解く方法である．これは最も単純化されたモデルであるため，得られる結果は，実験結果とは大きく異なると考えられる．ただし，課した仮定がシンプルで，かつ連続的な解が得られるため，続く数値解析結果を考察する上で比較対象として必要である．</p>
+<h2 id="2-fem">2. 数値的計算(FEM)<a class="headerlink" href="#2-fem" title="Permanent link">&para;</a></h2>
+<p>実際のケーブルの挙動は，線形バネのような簡単な関数として与えることはできず，梁の振動方程式とは別に，ケーブルの支配方程式を解かなければならない．そのため，より実際の現象を再現するためには，梁がケーブルから受ける力をシミュレートしつつ，梁の振動もシミュレートしなければならない．本研究では，梁の動的解析として標準的に利用されている，梁要素と四面体要素を使ったFEM解析を行い，その結果を解析解も含めて相互比較する．具体的に，梁要素で使う方程式は，１で扱う梁の振動方程式であり，境界条件が1-aと同じ線形バネの力であれば，1-aと等しい結果が得られるはずである．ただし，複雑なケーブル挙動の考慮は，FEMのような数値解析でしか得られない．２つ目の四面体を使った解析は，曲げによる応力だけでなく引っ張りによる応力も考慮でき，さらに微小変位の仮定を課さないため，定式上，より実際に近いモデルである．</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">解析手法 \ ケーブルのモデリング（梁上端での境界条件）　</th>
+<th style="text-align: center;">線形ケーブル</th>
+<th style="text-align: center;">動的ケーブル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">解析的計算（微小変位の仮定あり）</td>
+<td style="text-align: center;">o</td>
+<td style="text-align: center;">o</td>
+</tr>
+<tr>
+<td style="text-align: center;">梁要素（微小変位の仮定あり）</td>
+<td style="text-align: center;">o</td>
+<td style="text-align: center;">o</td>
+</tr>
+<tr>
+<td style="text-align: center;">梁要素（微小変位の仮定なし）</td>
+<td style="text-align: center;">o</td>
+<td style="text-align: center;">o</td>
+</tr>
+<tr>
+<td style="text-align: center;">四面体要素（微小変位の仮定なし，引っ張り応力の考慮も可能）</td>
+<td style="text-align: center;">o</td>
+<td style="text-align: center;">o</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">研究の概要<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">研究の内容の新規性<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_7">独創性<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<hr />
+<h1 id="_8">ケーブル破断に伴う衝撃力の再現<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Bertrand, C., Acary, V., Lamarque, C. ‐H., &amp; Ture Savadkoohi, A. (2020). A robust and efficient numerical finite element method for cables. International Journal for Numerical Methods in Engineering, 121(18), 4157–4186. https://doi.org/10.1002/nme.6435</li>
+</ul>
+<p>過去２０年にわたって，ケーブルの振動や破断に関する研究が行われてきた．しかし，静的，動的に関わらずケーブルの挙動解析のための統一した理論はまだ存在しない．</p>
+<h2 id="_9">ケーブルの振動<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>ケーブルに沿った座標系を考え，沿った距離を<span class="arithmatex">\(S\)</span>とする．ケーブルは３次元空間において，<span class="arithmatex">\(x,y,z\)</span>座標系で表現される．ケーブルの位置を<span class="arithmatex">\({\bf x}(S,t)\)</span>とする．<span class="arithmatex">\(\frac{d{\bf x}}{dS}\)</span>は接線ベクトルであり，<span class="arithmatex">\(\frac{d^2{\bf x}}{dS^2}\)</span>は曲率ベクトルである．もし，ケーブルが全く直線であれば，曲率ベクトルはゼロであり，伸びていなければ，接線ベクトルの大きさは1である．このことから，ケーブルの歪みが接線ベクトルを使って表現できる．</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{\left\|\frac{\partial {\bf x}}{\partial S}\right\| - 1}{1} = \left\|\frac{\partial {\bf x}}{\partial S}\right\| - 1 = \varepsilon(S,t)
+\end{equation}\]</div>
+<p>線形弾性体の場合，フックの法則により，応力と歪みの関係は，</p>
+<div class="arithmatex">\[\begin{align}
+\sigma(S,t) &amp;= E \varepsilon(S,t)\\
+\rightarrow \sigma(S,t)A{\bf e}(S,t) &amp;= E \varepsilon(S,t)A{\bf e}(S,t)
+\end{align}\]</div>
+<p>ケーブルに沿った力として<span class="arithmatex">\({\bf R}(S,t)=\sigma(S,t)A{\bf e}(S,t)\)</span>を定義する．ただし，<span class="arithmatex">\({\bf e}(S,t)\)</span>はケーブルの単位接線ベクトルである．</p>
+<h2 id="_10">ケーブルの運動方程式<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>外力が重力だけである場合，ケーブルの運動方程式は，</p>
+<div class="arithmatex">\[\begin{equation}
+\rho(S)\frac{\partial^2 {\bf x}}{\partial t^2} = \frac{\partial {\bf R}}{\partial S} + \rho(S){\bf g}
+\end{equation}\]</div>
+<p><span class="arithmatex">\({\bf g}\)</span>は重力ベクトルで多くの場合<span class="arithmatex">\({\bf g}=(0,0,-g)\)</span>である．<span class="arithmatex">\(\rho(S)\)</span>はケーブルの単位長さあたりの質量である．適当に無次元化すると，</p>
+<div class="arithmatex">\[\begin{equation}
+\frac{\partial^2 {\bf x}}{\partial t^2} = \frac{\partial {\bf R}}{\partial S} + {\bf g}
+\end{equation}\]</div>
+<!-- ニュートンの第２法則が出発点となる．
+つまり，微小要素$\Delta x$で，力と慣性力とを等しいという運動方程式から出発する．
+慣性力は，微小要素$\Delta x$の質量$\rho A \Delta x$に対して，$\rho A \Delta x \frac{\partial^2 y}{\partial t^2}$である． -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      
+        <script src="../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
