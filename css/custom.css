@@ -57,6 +57,12 @@ h1, h2, h3, h4 {
     display: inline;    
 }
 
+/* video */
+.md-typeset figure video {
+    display: block;
+    margin: 0 auto;
+}
+
 .center {
     display: block;
     margin: 0 auto;

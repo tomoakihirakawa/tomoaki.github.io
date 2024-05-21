@@ -152,43 +152,6 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
     
       <div class="md-header__source">
         <a href="https://github.com/tomoakihirakawa" title="Go to repository" class="md-source" data-md-component="source">
@@ -572,16 +535,104 @@
   
   
   
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fish Locomotion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fish Locomotion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../research_fish/" class="md-nav__link">
+      <a href="../research_fish_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    魚の泳法
+    Overview
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_fish_flow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    魚周りの流れの可視化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../research_fish_motion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    魚の運動の計測
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -825,21 +876,21 @@
 
   <h1> research DAF</h1>
 
-<p>動的増幅係数は，静的荷重の場合の最大応答（例えば変位，速度，加速度）に対する動的荷重下での最大応答の比率を示す．これは，動的荷重が静的荷重よりも構造にどれだけ大きな影響を与えるかを定量的に表す指標であり，ステップ荷重に対して，２になることが知られている．そのため，DAF=２を上限として橋梁などは設計されることが多い．しかし，実際にはどうだろうか？</p>
+<div><p>動的増幅係数は，静的荷重の場合の最大応答（例えば変位，速度，加速度）に対する動的荷重下での最大応答の比率を示す．これは，動的荷重が静的荷重よりも構造にどれだけ大きな影響を与えるかを定量的に表す指標であり，ステップ荷重に対して，２になることが知られている．そのため，DAF=２を上限として橋梁などは設計されることが多い．しかし，実際にはどうだろうか？</p>
 <p>横軸をMDOFの節点数Nにして，縦軸をDAFにして示す．さらに梁のDAFも調べる．</p>
 <figure>
-    <img alt="images/SDOF_MDOF_Beam.png" src="../images/SDOF_MDOF_Beam.png" width="70%" />
+    <img alt="images/SDOF_MDOF_Beam.png" src="../images/SDOF_MDOF_Beam.png" width="70%">
     <figcaption>SDFとMDOFと弾性梁のイメージ</figcaption>
 </figure>
 <p>Chao, Z. et al. (2020)は，SDOF系とMDOF系がステップ荷重に対してどのように振る舞うかを調べている．SDOF系のDAFは２になるが，MDOF系のDAFは２よりも大きくなることがわかった．</p>
 <figure>
-    <img alt="images/Chao2020_fig1.png" src="../images/Chao2020_fig1.png" width="70%" />
+    <img alt="images/Chao2020_fig1.png" src="../images/Chao2020_fig1.png" width="70%">
     <figcaption>Chao, Z., Hong, H., Kaiming, B., &amp; Xueyuan, Y. (2020)の図1</figcaption>
 </figure>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
 <ul>
 <li>Chao, Z., Hong, H., Kaiming, B., &amp; Xueyuan, Y. (2020). Dynamic amplification factors for a system with multiple-degrees-of-freedom. Earthquake Engineering and Engineering Vibration, 19(2), 363–375. https://doi.org/10.1007/s11803-020-0567-9 </li>
-</ul>
+</ul></div>
 
 
 
