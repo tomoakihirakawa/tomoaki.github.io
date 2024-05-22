@@ -1203,13 +1203,14 @@
 <figcaption>Raspberry Pi Zero 2 W</figcaption>
 </figure></p>
 <p>まずは，Raspberry Pi Zero 2 WをUSBでMacに接続する．そして，sshでリモートログイン．</p>
-<p>次に，マウントして，ローカルのディレクトリにRaspberry Piのファイルを編集できるようにする．</p>
+<p>次に，ローカルPCにラズパイをマウントする．</p>
 <ol>
-<li>適当な名前とディレクトリを作成（ここでは，pi_mountというディレクトリを作成）</li>
+<li>適当な名前のディレクトリを作成（ここでは，pi_mountというディレクトリを作成）</li>
 <li>sshfsを使ってRaspberry Piの/home/piディレクトリをローカルのpi_mountディレクトリにマウントする</li>
 <li>マウントされたディレクトリに移動して，その内容を確認</li>
 </ol>
-<p>この方法で，ローカルな環境でRaspberry Piのファイルを編集することができる．</p>
+<p><code>sshfs</code>をMacでインストールしておく必要がある（とても面倒だった記憶がある）．
+この方法で，ローカルな環境でRaspberry Piのファイルを編集することができる．</p>
 <p><figure markdown="span">
 <img alt="raspi_remote_login_through_usb" src="../images/raspi_remote_login_through_usb.png" style="width: 45%"><br>
 <img alt="raspi_mount" src="../images/raspi_mount.png" style="width: 45%">
