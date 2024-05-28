@@ -1175,7 +1175,7 @@
     土木学会東北支部発表会      : 2025-03-03, 2025-03-03</code></pre>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
 <p>魚の運動に関する先駆的なLightHill(1960)の理論は，<strong>魚の推進力</strong>を，魚が<strong>くねることに伴う仕事率</strong>とそこから<strong>流体が奪いさるエネルギー率</strong>から計算するものである．また，この推進力を効率的に生み出すために最適な泳ぎ方として，尾に向かって振幅が大きくなる進行波型の泳ぎ方を提案している．</p>
-<p>この理論では，魚の中央部分の断面形状が尾に向かって緩やかに変化し，また尾鰭でのみ渦が放出されることを仮定している．このような状況は，多くの魚に当てはまると考えられる．これまで開発された魚ロボットの多くは，この理論に基づき設計されている．しかし，その多くは関節が多く緩やかな断面形状を持っていない．この理論に基づき最適な遊泳法を検討するためには，魚の周りの流れを直接観測し，理論が課す仮定がどの程度成り立っているかを検証する必要がある．</p>
+<p>この理論では，魚の中央部分の断面形状が尾に向かって緩やかに変化し，また尾鰭でのみ渦が放出されることを仮定している．このような状況は，多くの魚に当てはまる有効な理論と考えられており，これまで開発された魚ロボットの多くは，この理論に基づき設計されている．しかし，魚ロボットの多くは関節が多く緩やかな断面形状を持っていない．この理論に基づき最適な遊泳法を検討するためには，魚の周りの流れを直接観測し，理論が課す仮定がどの程度成り立っているかを検証する必要がある．</p>
 <details class="note">
 <summary>Slender Fish with Ribbon-Shaped Fins</summary>
 <h2 id="slender-fish-with-ribbon-shaped-fins">理論（Slender Fish with Ribbon-Shaped Fins）<a class="headerlink" href="#slender-fish-with-ribbon-shaped-fins" title="Permanent link">¶</a></h2>
@@ -1289,7 +1289,7 @@ T = \frac{P-E}{U} = -\rho \frac{\partial}{\partial t} \int_{-{\ell}_n}^{\ell} A 
 <h3 id="title">Title：細長体理論に基づく魚ロボットの効率的な推進制御<a class="headerlink" href="#title" title="Permanent link">¶</a></h3>
 <p>LightHill(1960)の理論は，ある魚の運動から推進力を見積もることができる．これを利用して，反対に推進力から魚の運動を決めることができれば，魚の制御や設計にとても役立つ．これまでこのような方法で魚ロボットの制御を行った研究はない．</p>
 <p>実際の魚であっても，この理論がどの程度成り立っているかは不明である．特に，関節の多い魚ロボットに対してはこの理論の適用が可能か十分に調べる必要があるだろう．</p>
-<p>本研究では，LightHill(1960)の理論を出発点として，魚ロボットの動きと，推進力の関係を実験から調べる．魚の周りの流れを可視化し，理論が課す仮定がどの程度成り立っているか，理論を成り立たせるための魚の形状や運動を検証する．また，この理論を使って，魚ロボットの推進力を予測し，その推進力を制御する方法を考える．</p>
+<p>本研究では，LightHill(1960)の理論を出発点として，魚ロボットの動きと，推進力の関係を実験から調べる．魚の周りの流れを可視化し，理論が課す仮定がどの程度成り立っているか，理論を成り立たせるための魚の形状や運動を検証する．また，この理論を使って，魚ロボットの推進力を予測し，その推進力を制御する方法を提案する．</p>
 <div class="admonition abstract">
 <p class="admonition-title">暫定的な研究の流れ</p>
 <ol>
@@ -1377,6 +1377,8 @@ T = \frac{P-E}{U} = -\rho \frac{\partial}{\partial t} \int_{-{\ell}_n}^{\ell} A 
     
     
       <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      
+        <script src="../../javascripts/open_links_in_new_tab.js"></script>
       
         <script src="../../javascripts/mathjax-config.js"></script>
       
