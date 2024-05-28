@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#multipole_expansion" class="md-skip">
+        <a href="#macro-syntax-error" class="md-skip">
           Skip to content
         </a>
       
@@ -155,6 +155,43 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     
     
       <div class="md-header__source">
@@ -580,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research_fish_overview/" class="md-nav__link">
+      <a href="../research_fish/research_fish_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -601,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research_fish_theoretical/" class="md-nav__link">
+      <a href="../research_fish/research_fish_theoretical/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -622,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research_fish_exploratory/" class="md-nav__link">
+      <a href="../research_fish/research_fish_exploratory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,17 +794,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    境界要素法
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -778,74 +806,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#multipole_expansion" class="md-nav__link">
-    <span class="md-ellipsis">
-      multipole_expansionクラスのチェック
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      多重極展開とその移動
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="多重極展開とその移動">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      モーメント
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gmres" class="md-nav__link">
-    <span class="md-ellipsis">
-      GMRESと高速多重極展開
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      ツリー構造
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -938,65 +898,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#multipole_expansion" class="md-nav__link">
-    <span class="md-ellipsis">
-      multipole_expansionクラスのチェック
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      多重極展開とその移動
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="多重極展開とその移動">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      モーメント
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gmres" class="md-nav__link">
-    <span class="md-ellipsis">
-      GMRESと高速多重極展開
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      ツリー構造
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1014,90 +917,11 @@
   
 
 
-  <h1>境界要素法</h1>
-
-<div><h2 id="multipole_expansion"><code>multipole_expansion</code>クラスのチェック<a class="headerlink" href="#multipole_expansion" title="Permanent link">¶</a></h2>
-<h2 id="_1">多重極展開とその移動<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p></p><div class="highlight"><pre><span></span><code>sh<span class="w"> </span>clean
-cmake<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>../<span class="w"> </span>-DSOURCE_FILE<span class="o">=</span>test_translation_of_a_multipole_expansion.cpp
-make
-./test_translation_of_a_multipole_expansion
-</code></pre></div>
-ここで示す，多重極展開は次式を近似する．
-<div class="arithmatex">\[\begin{equation}
-(G,\nabla G\cdot {\bf n})=\left(\frac{1}{\|{\bf x}-{\bf a}\|}, -\frac{{\bf x}-{\bf a}}{\|{\bf x}-{\bf a}\|^3}\cdot{\bf n}\right)
-\end{equation}\]</div>
-<p>ガウス・ルジャンドル積分を使う際には，これに重みをかけて足し合わせる．その重みは別に計算し，保存しておく．元々の関数の近似の係数と重みの係数を混同しないように注意する．現在のところ，以下のような値を与えて多重極展開を計算している．</p>
-<ul>
-<li>カーネル<span class="arithmatex">\(G\)</span>には，位置と数値積分のための重みを与えている．</li>
-<li>カーネル<span class="arithmatex">\(\nabla G\cdot {\bf n}\)</span>には，位置と数値積分のための重み，そして法線ベクトルを与えている．</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">increment</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Tddd</span><span class="o">&amp;</span><span class="w"> </span><span class="n">XIN</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">weights</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Tddd</span><span class="o">&amp;</span><span class="w"> </span><span class="n">normal</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="n">Tddd</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">XIN</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">X</span><span class="p">;</span>
-<span class="w">   </span><span class="k">auto</span><span class="w"> </span><span class="n">set_coeffs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="n">SolidHarmonicR</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-<span class="w">               </span><span class="n">Dot</span><span class="p">(</span><span class="n">normal</span><span class="p">,</span><span class="w"> </span><span class="n">Grad_SolidHarmonicR</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">]};</span>
-<span class="w">   </span><span class="p">};</span>
-<span class="w">   </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="n">set_coeffs</span><span class="p">);</span>
-<span class="p">};</span>
-</code></pre></div>
-<div class="arithmatex">\[\begin{align*}
-\begin{pmatrix}
-G\\
-\nabla G\cdot {\bf n}
-\end{pmatrix}
-&amp; = 
-\begin{pmatrix}
-\frac{1}{\|{\bf x}-{\bf a}\|}\\
--\frac{{\bf x}-{\bf a}}{\|{\bf x}-{\bf a}\|^3}\cdot{\bf 
-n}
-\end{pmatrix}
-\\
-&amp; \approx \sum_{n=0}^{N}\sum_{m=-n}^{n}
-\begin{pmatrix}
-\overline{S}_{n,m}R_{n,m}\\
-\overline{S}_{n,m}((\nabla_{\rm sphe}R_{n,m})J)\cdot{\bf n}
-\end{pmatrix}\\
-&amp; = \sum_{n=0}^{N}\sum_{m=-n}^{n}
-\begin{pmatrix}
-\overline{S}_{n,m}R_{n,m}\\
-\overline{S}_{n,m}F_{n,m}
-\end{pmatrix}
-\end{align*}\]</div>
-<p><span class="arithmatex">\(J\)</span>は，極座標を直交座標で微分したものであり，ヤコビアン行列である．なので，極座標による微分に<span class="arithmatex">\(J\)</span>をかけることで，直交座標での微分を得ることができる．なので，<span class="arithmatex">\(((\nabla_{\rm sphe}R_{n,m})J)\)</span>は<span class="arithmatex">\(\nabla R_{n,m}\)</span>と同じである．</p>
-<p><span class="arithmatex">\(\overline{S}_{n,m}=\overline{S}_{n,m}({\bf a},{\bf x}_c)\)</span>,<span class="arithmatex">\(R_{n,m} = R_{n,m}({\bf x},{\bf x}_c)\)</span>,<span class="arithmatex">\(F_{n,m} = F_{n,m}({\bf x},{\bf x}_c)=\nabla R_{n,m}({\bf x},{\bf x}_c)\cdot{\bf n}({\bf x})\)</span>である．</p>
-<h3 id="_2">モーメント<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<p>多重極展開におけるモーメントは，簡単に言えば，<span class="arithmatex">\(R_{n,m}\)</span>や<span class="arithmatex">\(F_{n,m}\)</span>に，チャージまたはポテンシャルなどの値をかけたものの積分である．数値的には，<span class="arithmatex">\(R_{n,m}\)</span>や<span class="arithmatex">\(F_{n,m}\)</span>に，チャージまたはポテンシャルなどの値をかけたものに数値積分の重みをかけて足し合わせたものである．</p>
-<h3 id="gmres">GMRESと高速多重極展開<a class="headerlink" href="#gmres" title="Permanent link">¶</a></h3>
-<p>GMRES法は線形連立方程式を解くための反復法である．GMRESには行列ベクトル積の計算が含まれており，GMRESにとって行列ベクトル積の計算が最もコストがかかる．</p>
-<p>高速多重極展開は，多重極展開とその展開中心の移動，ツリー構造によって，この行列ベクトル積の計算を高速に行うことができる．</p>
-<p>具体的な計算をまとめてみよう．BEMに対してGMRES法を使う際に，行列ベクトル積の，行列とは何か，またベクトルとは何か？行列は，<span class="arithmatex">\(G\)</span>や<span class="arithmatex">\(\nabla G\cdot {\bf n}\)</span>の境界面積分である．そうなると，ベクトルは速度ポテンシャルと思われるが，GMRES法においては，クリロフ部分空間の正規直交基底<span class="arithmatex">\(\{v_1,v_2,\cdots,v_m\}\)</span>がベクトルとして与えられる．この基底を使って，何度も行列ベクトル積を計算し足し合わせたものが，解の近似値となる．</p>
-<ul>
-<li>GMRESは，繰り返し，異なる基底ベクトルを与え，行列ベクトル積を計算する</li>
-</ul>
-<p>その際に，高速多重極展開はどのような計算を行い，どのように行列ベクトル積を計算するのか？</p>
-<p>基底ベクトルが与えられた，FMMクラス（仮に）は，基底ベクトルからモーメントを計算する．
-具体的に，<span class="arithmatex">\(R_{n,m}\)</span>や<span class="arithmatex">\(F_{n,m}\)</span>に，基底ベクトルをかけたものに数値積分の重みをかけたものを足し合わせる．
-違う基底ベクトルに対しても，<span class="arithmatex">\(R_{n,m}\)</span>や<span class="arithmatex">\(F_{n,m}\)</span>と数値積分のための重みは共通なので，それらを保存しておけば，計算量を削減できる．
-このように考えると，プログラムは，</p>
-<ol>
-<li>
-<p>FMMクラスの初期化：</p>
-<ol>
-<li><span class="arithmatex">\(R_{n,m}\)</span>や<span class="arithmatex">\(F_{n,m}\)</span>と数値積分のための重みを計算し配列に保存</li>
-<li>展開中心の移動に必要な係数を配列に保存</li>
-</ol>
-</li>
-<li>
-<p>（行列ベクトル積）GRMESから基底ベクトルを与える：</p>
-<ol>
-<li>保存しておいた<span class="arithmatex">\(R_{n,m}\)</span>や<span class="arithmatex">\(F_{n,m}\)</span>と数値積分のための重みを使って，モーメントを計算</li>
-<li>保存しておいた展開中心の移動に必要な係数を使って，展開中心を移動</li>
-</ol>
-</li>
-</ol>
-<p>行列ベクトル積の結果ベクトルをGMRESに与える．2.を繰り返す．</p>
-<h3 id="_3">ツリー構造<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3></div>
+<div><h1 id="macro-syntax-error"><em>Macro Syntax Error</em><a class="headerlink" href="#macro-syntax-error" title="Permanent link">¶</a></h1>
+<p><em>File</em>: <code>my_research_BEM.md</code></p>
+<p><em>Line 14 in Markdown file:</em> <strong>unexpected char '\' at 327</strong>
+</p><div class="highlight"><pre><span></span><code>(G,\nabla G\cdot {\bf n})=\left(\frac{1}{\|{\bf x}-{\bf a}\|}, -\frac{{\bf x}-{\bf a}}{\|{\bf x}-{\bf a}\|^3}\cdot{\bf n}\right)
+</code></pre></div></div>
 
 
 
