@@ -477,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../research_beam_cable/research_cable.md" class="md-nav__link">
+      <a href="../../research_cable/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,6 +761,30 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ナノバブルとレーザーを使った流れの可視化はできないだろうか？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#title" class="md-nav__link">
     <span class="md-ellipsis">
       Title：細長体理論に基づく魚ロボットの効率的な推進制御
@@ -775,7 +799,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#references_1" class="md-nav__link">
     <span class="md-ellipsis">
       References
     </span>
@@ -944,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../my_research_cable.md" class="md-nav__link">
+      <a href="../../research_beam_cable/my_research_beam_cable/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1101,6 +1125,30 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ナノバブルとレーザーを使った流れの可視化はできないだろうか？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#title" class="md-nav__link">
     <span class="md-ellipsis">
       Title：細長体理論に基づく魚ロボットの効率的な推進制御
@@ -1115,7 +1163,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#references_1" class="md-nav__link">
     <span class="md-ellipsis">
       References
     </span>
@@ -1286,6 +1334,89 @@ V(x,t) = D[h(x,t)] \quad \left( = \frac{\partial h(x,t)}{\partial t} + U \frac{\
 T = \frac{P-E}{U} = -\rho \frac{\partial}{\partial t} \int_{-{\ell}_n}^{\ell} A V h_x dx + \rho \left[ A\left(\frac{1}{2} V^2 - U V\right) \right]_{x=\ell} - \rho \int_0^1 \left( \frac{1}{2} V^2 - U V h_x \right) A_x dx.
 \end{equation}\]</div>
 </details>
+<details class="note">
+<summary>流れの可視化</summary>
+<p>流れの可視化を行うには，強力なレーザー，扱いが面倒なトレーサー，そしてハイスピードカメラ・動画解析ソフトが必要な印象がある．しかし，Cierpka et al. (2021)によると，スマートフォンのカメラを用いて流れの可視化が可能だという．そこで利用したレーザーの特性は以下の通りである．（流れは緩やかなのでそもそもハイスピードでなくてよい流れ．レーザーのスペックが参考なる）</p>
+<ul>
+<li>Continuous wave (CW) laser diode</li>
+<li>Wavelength: 532 nm</li>
+<li>40 mW</li>
+</ul>
+<details class="warning">
+<summary>レーザークラスとその特性</summary>
+<table>
+<thead>
+<tr>
+<th>クラス</th>
+<th>波長</th>
+<th>出力</th>
+<th>特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>クラス1</td>
+<td>400-700nm（可視光），その他の波長も含む</td>
+<td>極めて低出力，最大1mW以下</td>
+<td>すべての使用条件下で安全．例：レーザープリンター</td>
+</tr>
+<tr>
+<td>クラス1M</td>
+<td>302.5-4000nm（可視光，赤外線）</td>
+<td>視認範囲では安全，光学機器を使用すると危険</td>
+<td>裸眼での直接視認は安全ですが，光学機器を使用して見ると危険．</td>
+</tr>
+<tr>
+<td>クラス2</td>
+<td>400-700nm（可視光）</td>
+<td>最大1mW</td>
+<td>短時間の偶然の露光であれば安全．例：レーザーポインター</td>
+</tr>
+<tr>
+<td>クラス2M</td>
+<td>400-700nm（可視光）</td>
+<td>最大1mW</td>
+<td>光学機器を使用して見ると危険．</td>
+</tr>
+<tr>
+<td>クラス3R</td>
+<td>400-700nm（可視光）</td>
+<td>最大5mW</td>
+<td>一定の条件下で危険，実際の怪我の可能性は低い．</td>
+</tr>
+<tr>
+<td><strong>クラス3B</strong></td>
+<td>315-4000nm（赤外線，可視光を含む）</td>
+<td>最大500mW</td>
+<td>直接視認や鏡面反射が危険，拡散反射は通常安全．</td>
+</tr>
+<tr>
+<td>クラス4</td>
+<td>180nm-1mm（紫外線から赤外線）</td>
+<td>500mW以上</td>
+<td>目や皮膚に対して極めて危険，火災のリスクあり．拡散反射も危険．</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>トレーサーは，直径 <span class="arithmatex">\(d_p = 20 \, \mu m\)</span> のポリアミド粒子を用いた．</p>
+<ol>
+<li>
+<p><strong>粒子の大きさと密度</strong>: 粒子の直径が小さく（20 <span class="arithmatex">\(\mu m\)</span>），密度が水に近い（$\rho _p = 1150 \, kg/m^3 $）ため，流れに対して良好に追従できる性質を持っている．</p>
+</li>
+<li>
+<p><strong>ストークス数</strong>: 結果として得られたストークス数が<span class="arithmatex">\(St \approx 6 \times 10^{-4}\)</span>と非常に小さく，これは<span class="arithmatex">\(10^{-1}\)</span>よりも小さいことを示している．ストークス数が小さいほど，粒子が流体の流れを高い忠実度で追従できることを意味する．</p>
+</li>
+</ol>
+<h3 id="_2">ナノバブルとレーザーを使った流れの可視化はできないだろうか？<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>ポリアミド粒子の代わりに，ナノバブルを用いることで，流れの可視化を行うことができるだろうか？ナノバブルの直径は，ポリアミド粒子の直径よりも小さいため，流れに対して追従する能力が高いと考えられる．このバブルがレーザーで可視化できれば，流れの可視化がより簡単になるかもしれない．</p>
+<p><a href="https://www.amazon.co.jp/%E6%97%A5%E6%9C%AC%E9%9B%BB%E8%88%88-%E5%BE%AE%E7%B4%B0%E6%B0%97%E6%B3%A1-%E3%83%8A%E3%83%8E%E3%83%90%E3%83%96%E3%83%AB%E7%99%BA%E7%94%9F%E3%82%AD%E3%83%83%E3%83%88-%E3%82%B7%E3%83%A3%E3%83%AF%E3%83%BC%E3%83%98%E3%83%83%E3%83%89%E7%94%A8-ND-NBSH/dp/B0CCCNTN6F/ref=pd_sim_d_sccl_4_4/357-5422057-6530222?pd_rd_w=n0ALh&amp;content-id=amzn1.sym.d686209d-8edb-4501-90de-4e255f5b32cf&amp;pf_rd_p=d686209d-8edb-4501-90de-4e255f5b32cf&amp;pf_rd_r=FNACQ2W0MY2PQSJJ60C6&amp;pd_rd_wg=WCcr4&amp;pd_rd_r=8089ebac-d542-4653-a995-32b897361e47&amp;pd_rd_i=B0CCCNTN6F&amp;th=1">日本電興 微細気泡 ナノバブル発生キット 樹脂 シャワーヘッド用 ND-NBSH</a></p>
+<p><a href="https://www.amazon.co.jp/SANEI-%E6%B4%97%E6%BF%AF%E6%A9%9F%E7%94%A8%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF%E3%83%BC-%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%90%E3%83%96%E3%83%AB%E7%99%BA%E7%94%9F-%E6%B4%97%E3%81%84%E6%AE%8B%E3%81%97%E3%81%AB%E5%B7%AE%E3%81%8C%E5%87%BA%E3%82%8B%E6%B4%97%E6%BF%AF%E6%A9%9F%E3%81%A8%E3%83%9B%E3%83%BC%E3%82%B9%E3%81%AE%E9%96%93%E3%81%AB-PM100-20/dp/B0CNGQRGCS/ref=sr_1_4?crid=3NYDFO0F1RNBH&amp;dib=eyJ2IjoiMSJ9.dV9YgJS_R4tklZz4lvEKw0n0FNx_humA0RInu3MvkEVLD4R_0eate-eWgxkBr4Wc35Pjud8dm0ZURCm3RDGjE1gaoIpZHBLPqVwnJzIGWP8.s8UNF9HocF6AB8HzCUTFx_fq9Y5An_1JHeeJyp-xuQI&amp;dib_tag=se&amp;keywords=%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%90%E3%83%96%E3%83%AB&amp;qid=1716943760&amp;rnid=2321267051&amp;s=diy&amp;sprefix=%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%90%E3%83%96%E3%83%AB%2Caps%2C180&amp;sr=1-4&amp;th=1">SANEI 洗濯機用アダプター ウルトラファインバブル発生 簡単取付＆工具不要 洗い残しに差が出る洗濯機とホースの間に G¾ PM100-20</a></p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
+<ul>
+<li>Cierpka, C., Otto, H., Poll, C., Hüther, J., Jeschke, S., &amp; Mäder, P. (2021). SmartPIV: flow velocity estimates by smartphones for education and field studies. Experiments in Fluids, 62(8), 172. <a href="https://doi.org/10.1007/s00348-021-03262-z">https://doi.org/10.1007/s00348-021-03262-z</a></li>
+</ul>
+</details>
 <h3 id="title">Title：細長体理論に基づく魚ロボットの効率的な推進制御<a class="headerlink" href="#title" title="Permanent link">¶</a></h3>
 <p>LightHill(1960)の理論は，ある魚の運動から推進力を見積もることができる．これを利用して，反対に推進力から魚の運動を決めることができれば，魚の制御や設計にとても役立つ．これまでこのような方法で魚ロボットの制御を行った研究はない．</p>
 <p>実際の魚であっても，この理論がどの程度成り立っているかは不明である．特に，関節の多い魚ロボットに対してはこの理論の適用が可能か十分に調べる必要があるだろう．</p>
@@ -1304,7 +1435,7 @@ T = \frac{P-E}{U} = -\rho \frac{\partial}{\partial t} \int_{-{\ell}_n}^{\ell} A 
 <li>命令した推進力通りに魚が動くように制御できるようになる</li>
 </ol>
 </div>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
+<h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <p>全体的レビュー</p>
 <ul>
 <li>Lauder, G. V. (2015). Fish locomotion: Recent advances and new directions. Annual Review of Marine Science, 7, 521–545. <a href="https://doi.org/10.1146/annurev-marine-010814-015614">https://doi.org/10.1146/annurev-marine-010814-015614</a></li>
