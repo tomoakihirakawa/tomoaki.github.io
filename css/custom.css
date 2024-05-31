@@ -87,3 +87,9 @@ h1, h2, h3, h4 {
     font-size: 20px; /* Adjust this value to change the section font size */
     font-weight: bold; /* Adjust this value to change the section font weight */
 }
+
+/* Font size */
+html {
+    font-size: 1.5em;
+    /* font-weight: 500; */
+}
