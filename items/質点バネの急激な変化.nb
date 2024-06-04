@@ -1,0 +1,24 @@
+In[1161]:= ClearAll["Global`*"]
+NotebookEvaluate[FileNameJoin[{NotebookDirectory[],"mathematica_plot_options.nb"}]]
+\:8A55\:4FA1\:4E2D\:FF1AIn[28]:= Available:{plot2Doption,plot3Doption,framelabel[xlabel_String,ylabel_String,size_:20],axeslabel2D[xlabel_String,ylabel_String,size_:20],axeslabel3D[xlabel_String,ylabel_String,zlabel_String,size_:20],axeslabel[labels_List,size_: 20],importData,jsonInfo,interpolateAndFourier,interpolateAndFourierTr,getOmegaFromKandDepth,getTFromLandDepth}
+In[1184]:= k=1;
+k0=k;
+k1[α_]:=α*k0;
+m=1;
+ω=Sqrt[m/k]
+αlist=Table[α,{α,0.,1,0.2}];
+ListPlot[Table[Table[{t,(-1+k1[α]/k0)Cos[ω*t]+1},{t,0,5*2π/ω,5*2π/ω/100}],{α,αlist}],
+Evaluate[plot2Doption],
+GridLines->All,
+Joined->True,
+FrameLabel->{t,"DAF"},
+Background->White,
+PlotLegends->Table["α="<>ToString[α],{α,αlist}]]
+Out[1188]= 1
+Out[1190]= 	α=0.
+	α=0.2
+	α=0.4
+	α=0.6
+	α=0.8
+	α=1.
+
