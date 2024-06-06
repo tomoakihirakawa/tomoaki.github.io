@@ -616,7 +616,7 @@
         
   
   <span class="md-ellipsis">
-    Moon Poolの共振周波数
+    ムーンプール共振
   </span>
   
 
@@ -1032,118 +1032,33 @@
   
 
 
-  <h1>research Wu1971 slender fish with ribbon shaped fins</h1>
-
-<div><h2 id="slender-fish-with-ribbon-shaped-fins">理論（Slender Fish with Ribbon-Shaped Fins）<a class="headerlink" href="#slender-fish-with-ribbon-shaped-fins" title="Permanent link">¶</a></h2>
-<p>この理論は，Wu, T.Y. (1971)の"Slender Fish with Ribbon-Shaped Fins"に基づく．</p>
-<h3 id="_1">魚のヒレでの分類<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">リボンフィン型 (Ribbon-Shaped Fins)</th>
-<th style="text-align: center;">両方のフィン型 (Both Fin Types)</th>
-<th style="text-align: center;">帆形フィン型 (Sail-Shaped Fins)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">シイラ (<a href="https://en.wikipedia.org/wiki/Mahi-mahi">Coryphaena hippurus</a>)</td>
-<td style="text-align: center;">ブルーフィンツナ (<a href="https://en.wikipedia.org/wiki/Atlantic_bluefin_tuna">Thunnus thynnus</a>)</td>
-<td style="text-align: center;">バラクーダ (<a href="https://en.wikipedia.org/wiki/Barracuda">Sphyraena pinguis</a>)</td>
-</tr>
-<tr>
-<td style="text-align: left;">ヒラマサ (<a href="https://en.wikipedia.org/wiki/Yellowtail_amberjack">Yellowtail amberjack</a>)</td>
-<td style="text-align: center;">カツオ (<a href="https://en.wikipedia.org/wiki/Skipjack_tuna">Katsuwonus pelamis</a>)</td>
-<td style="text-align: center;">ニジマス (<a href="https://en.wikipedia.org/wiki/Rainbow_trout">Oncorhynchus mykiss</a>)</td>
-</tr>
-<tr>
-<td style="text-align: left;">タイ (<a href="https://en.wikipedia.org/wiki/Pagrus_major">Pagrus major</a>)</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">サケ (<a href="https://en.wikipedia.org/wiki/Sockeye_salmon">Oncorhynchus nerka</a>)</td>
-</tr>
-<tr>
-<td style="text-align: left;">キタノホッケ(<a href="https://en.wikipedia.org/wiki/Atka_mackerel">Pleurogrammus azonus</a>)</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">ボラ (<a href="https://en.wikipedia.org/wiki/Flathead_grey_mullet">Mugil cephalus</a>)</td>
-</tr>
-</tbody>
-</table>
-<figure>  <br>
-<img alt="シイラ" src="../images/mahimahi.png" style="width: 49%">
-    <figcaption>
-    <a href="https://en.wikipedia.org/wiki/Mahi-mahi">シイラ(Mahi-Mahi)</a>．<strong>リボンタイプ</strong>の背びれと胸びれを持つ．
-    </figcaption>
-</figure>
-<figure>
-  <img alt="fish_thrust_schematic.png" src="../images/fish_thrust_schematic.png" style="width: 49%">
-<br>
-<!-- ![fish_blue_print_dall_e](images/fish_blue_print_dall_e.png){: style='width: 49%'} -->
-
-
-  <figcaption>Wu, T. Y. T. (1971)を参考に作成</figcaption>
-</figure>
-<p>体を変位<span class="arithmatex">\(h(x,t)\)</span>でくねらせながら，速度<span class="arithmatex">\(U\)</span>で魚が泳いでいる．魚の仕事率（パワー）<span class="arithmatex">\(P\)</span>は，流体を動かすために費やされる仕事率<span class="arithmatex">\(E\)</span>と，推進に関する仕事率<span class="arithmatex">\(UT\)</span>に分けることができる．ここで<span class="arithmatex">\(T\)</span>が推進力である：</p>
-<div class="arithmatex">\[\begin{equation}
-\begin{aligned}
-P &amp;= E + UT\\
-\rightarrow T &amp;= \frac{P - E}{U}
-\end{aligned}
-\end{equation}\]</div>
-<p>魚の仕事率<span class="arithmatex">\(P\)</span>と流体が奪い取る仕事率<span class="arithmatex">\(E\)</span>を理論的に求め，そこから推進力<span class="arithmatex">\(T\)</span>を計算することができる．</p>
-<h3 id="p">魚の仕事率<span class="arithmatex">\(P\)</span><a class="headerlink" href="#p" title="Permanent link">¶</a></h3>
-<p>魚の仕事率は，魚が受ける揚力<span class="arithmatex">\(\mathcal{L}(x,t)\)</span>かける魚の局所的な変位速度<span class="arithmatex">\(\frac{\partial h}{\partial t}(x,t)\)</span>を積分しマイナスをつけた（作用反作用）ものである．</p>
-<div class="arithmatex">\[\begin{equation}
-P = -\int_{-{\ell}_n}^{\ell} \mathcal{L}(x,t) \frac{\partial h}{\partial t} dx
-\end{equation}\]</div>
-<p>魚の変位<span class="arithmatex">\(h(x,t)\)</span>とその変化<span class="arithmatex">\(\frac{\partial h}{\partial t}(x,t)\)</span>はわかっており理論的に求める対象ではない．なので，理論的に求めるものは，魚の受ける揚力<span class="arithmatex">\(\mathcal{L}(x,t)\)</span>である．</p>
-<h4 id="mathcallxt">魚の受ける揚力<span class="arithmatex">\(\mathcal{L}(x,t)\)</span><a class="headerlink" href="#mathcallxt" title="Permanent link">¶</a></h4>
-<p>魚が持つ仮想質量の運動量は<span class="arithmatex">\(\rho A(x) V(x,t)\)</span>と表される．ここで，<span class="arithmatex">\(\rho\)</span>は水の密度，<span class="arithmatex">\(\rho A(x)\)</span>は仮想質量，<span class="arithmatex">\(V(x,t)\)</span>は断面方向の変位速度である．</p>
-<div class="arithmatex">\[\begin{equation}
-V(x,t) = D[h(x,t)] \quad \left( = \frac{\partial h(x,t)}{\partial t} + U \frac{\partial h(x,t)}{\partial x} \right)
-\end{equation}\]</div>
-<p>ここで，<span class="arithmatex">\(D \equiv \left(\frac{\partial}{\partial t} + U \frac{\partial}{\partial x} \right)\)</span>である．
-単位長さあたりの<span class="arithmatex">\(z\)</span>方向の運動量の時間変化は，単位長さあたりの揚力であり，次のように表される．</p>
-<div class="arithmatex">\[\begin{align}
-\mathcal{L}(x,t) &amp;= - \rho D \left[ A(x) V(x,t) \right] \quad {\text {for}} \quad -{\ell}_n &lt; x &lt; 0,\, 1 &lt; x &lt; \ell \\
-\mathcal{L}(x,t) &amp;= - \rho A(x) D \left[  V(x,t) \right] \quad {\text {for}} \quad 0 &lt; x &lt; 1
-\end{align}\]</div>
-<p><span class="arithmatex">\(0&lt;x&lt;1\)</span>の部分で，<span class="arithmatex">\(A(x)\)</span>が<span class="arithmatex">\(x\)</span>方向に変化せず続いていると考えると，演算<span class="arithmatex">\(D\)</span>の外に出すことができる．</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>魚の渦放出の効果を考慮することは，<span class="arithmatex">\(A(x)\)</span>を定数として扱うことと同じである．</p>
-<div class="admonition quote">
-<p class="admonition-title">Wu (1971)</p>
-<p>in which the virtual mass <span class="arithmatex">\(\rho A(x)\)</span>refers to the fish body cross section alone, not including the cross section of the vortex sheet as a part of an effective “virtual body.” Thus the effect of vortex shedding is equivalent to treating <span class="arithmatex">\(A(x)\)</span> as if it is a constant in calculating the changes of the cross flow momentum. Alternatively, this effect may be considered to contribute a correction term <span class="arithmatex">\(\rho V U dA/dx\)</span> to the <span class="arithmatex">\(\mathcal{L}\)</span> based on the calculation without accounting for the effect of vortex shedding, i.e., the <span class="arithmatex">\(\mathcal{L}\)</span> given by (2.16a). We note that <span class="arithmatex">\(dA/dx &lt; 0\)</span> in the trailing-edge section, <span class="arithmatex">\(0 &lt; x &lt; 1\)</span>.</p>
+<div id="mkdocs-encrypted-content" style="display:none">ixrnd6cSGDs6PQOhe0ri1Q==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>PASSWORD REQUIRED</h1>
+        <p>write out</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
 </div>
-</div>
-<p>結果だけを示すと</p>
-<div class="arithmatex">\[\begin{equation}
-\begin{aligned}
-\frac{P}{\rho} &amp;= -\frac{1}{\rho}\int_{-l_n}^{l}{h_t \mathcal{L}(x,t)dx} \\ 
-&amp;=\frac{\partial}{\partial t} \int_{-{\ell}_n}^{\ell} A V \left(h_t - \frac{V}{2} \right) dx + U \left\{[A V h_t]_{x=\ell} - \frac{\partial}{\partial x} \int_0^1 h_t V A_x dx\right\}
-\end{aligned}
-\end{equation}\]</div>
-<h3 id="e">流体が奪い取る仕事率<span class="arithmatex">\(E\)</span><a class="headerlink" href="#e" title="Permanent link">¶</a></h3>
-<p>魚の単位長さあたりに流体が奪い取る運動エネルギーは，<span class="arithmatex">\(\frac{1}{2} \rho A V^2\)</span>である．したがって，運動エネルギーの時間変化は，次のように表される．</p>
-<div class="arithmatex">\[\begin{equation}
-\begin{aligned}
-\frac{E}{\rho} &amp;= \int_{-{\ell}_n}^{\ell} D \left[ \frac{1}{2} A V^2 \right] dx - \int_{0}^{1} \frac{1}{2} V^2 U A_x dx\\
-&amp;= \frac{1}{2} 
-\left\{
-\frac{\partial}{\partial t} \int_{-{\ell}_n}^{\ell} A V^2 dx + U \left\{[A V^2]_{x=\ell} - \frac{\partial}{\partial x} \int_0^1 V^2 A_x dx\right\}
-\right\}
-\end{aligned}
-\end{equation}\]</div>
-<h3 id="t">推進力<span class="arithmatex">\(T\)</span><a class="headerlink" href="#t" title="Permanent link">¶</a></h3>
-<div class="arithmatex">\[\begin{equation}
-\begin{aligned}
-\frac{P - E}{\rho} = \frac{\partial}{\partial t}\int _{\ell_n}^{\ell} A V (h_t - V) dx + U \left\{A [V h_t - \frac{1}{2} V^2]_{x=\ell} - \frac{\partial}{\partial x} \int_0^1 (h_t V - \frac{1}{2} V^2 )A_x dx \right\}
-\end{aligned}
-\end{equation}\]</div>
-<p>これに，<span class="arithmatex">\(V=\frac{\partial h}{\partial t} + U \frac{\partial h}{\partial x}\)</span>を<span class="arithmatex">\(h_t\)</span>に代入すると，シンプルになる．</p>
-<div class="arithmatex">\[\begin{equation}
-T = \frac{P-E}{U} = -\rho \frac{\partial}{\partial t} \int_{-{\ell}_n}^{\ell} A V h_x dx + \rho \left[ A\left(\frac{1}{2} V^2 - U V\right) \right]_{x=\ell} - \rho \int_0^1 \left( \frac{1}{2} V^2 - U V h_x \right) A_x dx.
-\end{equation}\]</div></div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "thesis/research_fish/research_Wu1971_slender_fish_with_ribbon_shaped_fins/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["h3vPNjUMstd7rl1jCCMc4g==;hlMpNwS92Y/clfbbBgrT5eeLTKykYYqHCWuD7eW+JUk8loMpHVgRowM6zc5JyRx+i89BRmGWavw8O8gD36QNwSmyIilSpUlUsiB+M9EUqZzBgRpqy15tht+L8kbmXwoj;gU7PlOQCPgLIp1qjpH+VTg=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 

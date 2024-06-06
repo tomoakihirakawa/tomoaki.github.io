@@ -622,7 +622,7 @@
         
   
   <span class="md-ellipsis">
-    Moon Poolの共振周波数
+    ムーンプール共振
   </span>
   
 
@@ -1131,34 +1131,33 @@
   
 
 
-  <h1>梁とケーブルの連成解析</h1>
-
-<div><h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
-<p>斜張橋のケーブルの固有振動数が橋梁全体の固有振動の倍数に近い場合，風などの外力に伴うケーブル振動が橋桁振動を大きく励起させたり，地震による橋梁の振動がケーブル振動を大きく励起させたり，いわゆる内部共振が発生することがある．この現象は，橋梁自体の耐性や通行者の安全性に影響を及ぼすため，橋梁の設計や維持管理において重要である．</p>
-<p>藤野ら(1991)は，Lagrangeの定式化に基づく梁とケーブルを連成させた非線形運動方程式を導出し，摂動法を用いて定常解を求めている．解と実験結果は良好な一致を示し，この理論を利用することで，実際の斜張橋の内部共振現象を予測することができる．この解析方法は，数式を通してケーブルと梁の相互作用を捉えることができる点で，FEMなどのような数値的な方法と比べて優れている．Fujino et al. (1995)は，藤野ら(1991)では考慮されていなかった，ケーブルの面内振動をも考慮した定常解を求めている．しかし，藤野の解析における橋桁は片持ち梁，つまり斜張橋の主塔は完全に固定されており，主塔の振動が考慮されていない．</p>
-<p>そこで，本研究は，藤野の方法をさらに発展させ，主塔-ケーブル-梁系を連成させたモード解析をLagrangeの方程式を用いて行い，内部共振現象の理解を深めることを目的とする．数学的な解析に対応する実験を行い，実験結果との比較を通して，理論の改善・妥当性の検証を行う．</p>
-<h3 id="_1">独創性<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p>以前と比べて計算機の性能が大幅に向上した現在において，橋梁の解析の多くは，有限要素法のような数値的な方法が主流である．しかし，斜張橋の振動に関連する問題が今もなお生じていることは，数値的な方法を使った試行錯誤だけでは簡単に解決できない問題があることを示している．理論的アプローチは対象が過度にシンプルになる傾向があるものの橋の振動を抑制する直感的な指針を与えてくれる可能性がある．本研究で扱う，主塔-ケーブル-梁系の連成解析は，従来の理論よりも実際の橋梁に近いため，さらに実用的な指針を与えることが期待される．</p>
-<h3 id="_2">成果の活用<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<p>主塔-ケーブル-梁の連成解析の結果を数式上で理解することで，主塔-ケーブル-梁の相互作用をより直感的に理解することができる．また，実際の斜張橋の設計や維持管理において，内部共振現象を予測するための基礎となる．さらに，橋梁の振動を効率的に抑制するダンパーやアクティブ制御の設計に役立てることができると考えられる．</p>
-<h3 id="_3">今後の展望<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
-<p>本研究では，主塔-ケーブル-梁という実際の橋梁と比べるとシンプルなモデルを対象としている．人の手で，これをさらに複雑な橋梁モデルにその都度適用することは困難である．そこで，橋桁の長さや，ケーブルの設置位置や角度，ケーブルの本数などを変更することだけで，この理論に基づいた橋梁の振動特性を予測することができるソフトウェアの開発を考えている．ケーブル破断の影響を考慮した橋梁の振動解析についても，今後の課題として取り組んでいきたい．</p>
-<div class="admonition note">
-<p class="admonition-title">理論</p>
-<h2 id="-">ラグランジュの定式化によるビーム-ケーブル系の運動方程式導出<a class="headerlink" href="#-" title="Permanent link">¶</a></h2>
+<div id="mkdocs-encrypted-content" style="display:none">PtzsuFH4Ga5tU8oWn0xQsA==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>PASSWORD REQUIRED</h1>
+        <p>write out</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
 </div>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
-<ul>
-<li>
-<p><a href="https://doi.org/10.2208/jscej.1991.432_109">陽三藤野, WARNITCHAI, P., &amp; PACHECO, B. M. (1991). ケーブル・はりモデルを用いた斜張橋の内部共振に関する実験と解析. 土木学会論文集, 1991(432), 109–118. https://doi.org/10.2208/jscej.1991.432_109</a></p>
-</li>
-<li>
-<p><a href="https://link.springer.com/article/10.1007/BF00045250">Fujino, Y., Warnitchai, P., &amp; Pacheco, B. M. (1993). An experimental and analytical study of autoparametric resonance in a 3DOF model of cable-stayed-beam. Nonlinear Dynamics, 4(2), 111–138. https://doi.org/10.1007/BF00045250</a></p>
-</li>
-<li>
-<p><a href="Warnitchai,%20P.,%20Fujino,%20Y.,%20Pacheco,%20B.%20M.,%20&amp;%20Agret,%20R.%20(1993).%20An%20experimental%20study%20on%20active%20tendon%20control%20of%20cable%E2%80%90stayed%20bridges.%20Earthquake%20Engineering%20&amp;%20Structural%20Dynamics,%2022(2),%2093%E2%80%93111.%20https://doi.org/10.1002/eqe.4290220202">Warnitchai, P., Fujino, Y., Pacheco, B. M., &amp; Agret, R. (1993). An experimental study on active tendon control of cable‐stayed bridges. Earthquake Engineering &amp; Structural Dynamics, 22(2), 93–111. https://doi.org/10.1002/eqe.4290220202</a></p>
-</li>
-</ul></div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "research_beam_cable/my_research_beam_cable/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["h3vPNjUMstd7rl1jCCMc4g==;hlMpNwS92Y/clfbbBgrT5eeLTKykYYqHCWuD7eW+JUk8loMpHVgRowM6zc5JyRx+i89BRmGWavw8O8gD36QNwSmyIilSpUlUsiB+M9EUqZzBgRpqy15tht+L8kbmXwoj;gU7PlOQCPgLIp1qjpH+VTg=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 

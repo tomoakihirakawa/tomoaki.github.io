@@ -802,7 +802,7 @@
         
   
   <span class="md-ellipsis">
-    Moon Poolの共振周波数
+    ムーンプール共振
   </span>
   
 
@@ -1293,186 +1293,33 @@
   
 
 
-  <h1>Overview</h1>
-
-<div><div class="admonition note">
-<p class="admonition-title">質点-バネ</p>
-<h2 id="_1">バネに繋がった質点の運動<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<h3 id="_2">一般解<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<p>バネ定数<span class="arithmatex">\(k\)</span>のバネで天井から吊るされた質点<span class="arithmatex">\(m\)</span>の運動方程式を考える．バネの自然長さからの変位を<span class="arithmatex">\(y(t)\)</span>．<span class="arithmatex">\(y(t)\)</span>は重力と反対の方向を向いているとすると，質点の運動方程式は，</p>
-<div class="arithmatex">\[\begin{equation}
-m \frac{d^2 y}{dt^2} = - k y - mg
-\end{equation}\]</div>
-<p>となる．この運動方程式の解は，斉次方程式の解と非斉次方程式の特殊解の和で表される．斉次方程式は，</p>
-<div class="arithmatex">\[\begin{equation}
-m \frac{d^2 y}{dt^2} + k y = 0
-\end{equation}\]</div>
-<p>で，この方程式の解は，<span class="arithmatex">\(y(t) = A \cos(\omega t + \phi)\)</span>，<span class="arithmatex">\(\omega = \sqrt{\frac{k}{m}}\)</span>である．非斉次方程式の特殊解は，<span class="arithmatex">\(y(t) = -\frac{mg}{k}\)</span>である．よって，一般解は，これらを足し合わせて，</p>
-<div class="arithmatex">\[\begin{equation}
-y(t) = A \cos(\omega t + \phi) - \frac{mg}{k}
-\label{eq:general_solution_mass_spring}
-\end{equation}\]</div>
-<p>となる．余談：確かに，釣り合いの変位<span class="arithmatex">\(y=-\frac{mg}{k}\)</span>は，バネの自然長における変位<span class="arithmatex">\(y=0\)</span>よりも下にある．直感と合っていてこの解は間違いなさそうだ．</p>
-<h3 id="_3">突然バネが切れた後の振動<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
-<p>バネが複数あって，突然あるバネが切れて幾つかのバネが残る現象は，<span class="arithmatex">\(k_0\)</span>のバネで釣り合っている状態を初期状態として，<span class="arithmatex">\(k_0 \rightarrow k_1\)</span>と変化する現象として表すことができる．</p>
-<p>突然<span class="arithmatex">\(k_0\rightarrow k_1\)</span>となったとしても，<span class="arithmatex">\(k=k_1\)</span>とした一般解\eqref{eq:general_solution_mass_spring}に従って質点は運動するから，複雑なことはない．初期条件から<span class="arithmatex">\(A\)</span>が求めると，</p>
-<div class="arithmatex">\[\begin{equation}
-\begin{aligned}
-y(0) = - \frac{mg}{k_0} = A \cos(0) - \frac{mg}{k_1}\\
-\rightarrow A = mg\left(\frac{1}{k_1} - \frac{1}{k_0}\right) 
-\end{aligned}
-\end{equation}\]</div>
-<p>よって，バネ定数が変化したあと，<span class="arithmatex">\(y(t)\)</span>は次のように変化する：</p>
-<div class="arithmatex">\[\begin{equation}
-y(t) = mg\left(\left(\frac{1}{k_1} - \frac{1}{k_0}\right) \cos(\omega t) - \frac{1}{k_1} \right)
-\label{eq:general_solution_mass_spring_cut}
-\end{equation}\]</div>
-<h3 id="dafdynamic-amplification-factor">DAF（Dynamic Amplification Factor）<a class="headerlink" href="#dafdynamic-amplification-factor" title="Permanent link">¶</a></h3>
-<p>DAF（Dynamic Amplification Factor）は，この変位\eqref{eq:general_solution_mass_spring_cut}と，釣り合いの変位との比なので，<span class="arithmatex">\(y(t)/(-\frac{mg}{k_1})\)</span>の最大値を求めればよい．比は，</p>
-<div class="arithmatex">\[\begin{equation}
--\frac{k_1}{mg}y(t) = \left(- 1 + \frac{k_1}{k_0}\right) \cos(\omega t) + 1.
-\end{equation}\]</div>
-<p>なので，DAFは，<span class="arithmatex">\({\text {DAF}} = \max{\left(-\frac{k_1}{mg}y(t) = \left(- 1 + \frac{k_1}{k_0}\right) \cos(\omega t) + 1\right)}\)</span>.つまり，<span class="arithmatex">\({\text {DAF}} = 2 - \alpha\)</span>となる．</p>
-<p><span class="arithmatex">\(k_1=\alpha k_0\)</span>と変化したとして，<span class="arithmatex">\(\alpha\)</span>に応じて\eqref{eq:general_solution_mass_spring_cut}がどのように変化するかを見てみる．</p>
-<p><figure markdown="span">
-    <img alt="DAF" src="../../images/DAF_mass_spring.png" width="50%">
-    <figcaption><span class="arithmatex">\(k_1=\alpha k_0\)</span>の<span class="arithmatex">\(\alpha\)</span>と\eqref{eq:general_solution_mass_spring_cut}の関係．<span class="arithmatex">\(\alpha=0\)</span>のとき，DAFは<span class="arithmatex">\(2\)</span>となることがわかる．</figcaption>
-</figure></p>
-<p><span class="arithmatex">\(k_0 = 1, k_1= \alpha k_0,m = 1,\omega=\sqrt{k/m}\)</span>としている．</p>
-<p><span class="arithmatex">\(\alpha=0\)</span>はバネがなくなった状態で単振動する結果は不自然で，つまり上の計算方法は破綻している．なのでバネは決してなくならないとする．代わりに，<span class="arithmatex">\(\lim_{\alpha \to 0} {\text {DAF}} = 2\)</span>と考える．</p>
+<div id="mkdocs-encrypted-content" style="display:none">upuPwVCRWfdDlntT1hAk+A==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>PASSWORD REQUIRED</h1>
+        <p>write out</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
 </div>
-<h2 id="_4">棒状構造物の曲げ振動方程式（オイラー・ベルヌーイの動的梁方程式）<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
-<p>得たい式は，既知の情報である構造物が受ける外力と，構造物の変位<span class="arithmatex">\(y(x,t)\)</span>との関係を示す式である．角度<span class="arithmatex">\(\theta\)</span>や曲率<span class="arithmatex">\(\rho\)</span>などは消去して，<span class="arithmatex">\(y(x,t)\)</span>だけにしたい．<span class="arithmatex">\(d\ell\)</span>の微小要素を抜き出して考える．曲げによって<span class="arithmatex">\(d\ell\)</span>から伸縮した長さを<span class="arithmatex">\(\Delta d\ell\)</span>とすると，その位置での歪みは，<span class="arithmatex">\(\varepsilon = {\Delta d\ell}/{d\ell}\)</span>となる．弾性係数を<span class="arithmatex">\(E\)</span>とすると，応力<span class="arithmatex">\(\sigma = \sigma (x, y,t)\)</span>は</p>
-<div class="arithmatex">\[\begin{equation}
-\sigma = E \dfrac{\Delta d\ell}{d\ell}\label{eq:stress}
-\end{equation}\]</div>
-<p>\eqref{eq:stress}となる．<span class="arithmatex">\({\Delta d\ell}\)</span>は断面の位置<span class="arithmatex">\(y\)</span>や時間<span class="arithmatex">\(t\)</span>によって異なるので，<span class="arithmatex">\({\Delta d\ell}={\Delta d\ell}(y,t)\)</span>と考えられる．具体的には，<span class="arithmatex">\(y\)</span>を中立軸からの距離として，曲率<span class="arithmatex">\(\rho=\rho(x,t)\)</span>を使うと，</p>
-<div class="arithmatex">\[\begin{equation}
-\begin{aligned}
-\rho \theta&amp;= d\ell\\
-\rightarrow (\rho+y) \theta &amp;= d\ell + \Delta d\ell
-\end{aligned}
-\label{eq:curvature}
-\end{equation}\]</div>
-<p>\eqref{eq:curvature}から，<span class="arithmatex">\(\frac{\Delta d\ell}{d\ell} = \frac{y}{\rho}\)</span>とわかる．</p>
-<div class="arithmatex">\[\begin{equation}
-\sigma (x,y,t)= E \dfrac{y(x,t)}{\rho(x,t)}\\
-\end{equation}\]</div>
-<p>となる．曲率<span class="arithmatex">\(\rho\)</span>は直接計算が難しいので，変位の微分を使って書き換える．次の関係式を使う．</p>
-<div class="arithmatex">\[\begin{equation}
-\frac{1}{\rho} = - \frac{d \theta}{d s} = - \frac{d \theta}{d x}\frac{d x}{d s} = - \dfrac{\dfrac{d^2 y}{d x^2}}{\left(1+\left(\dfrac{dy}{dx}\right)^2\right)^{\frac{3}{2}}}
-\end{equation}\]</div>
-<p>となる．よって，</p>
-<div class="arithmatex">\[\begin{equation}
-\sigma (x,y,t)= -E y \frac{\dfrac{d^2 y}{d x^2}}{\left(1+\left(\dfrac{dy}{dx}\right)^2\right)^{\frac{3}{2}}}
-\end{equation}\]</div>
-<p>となる．とても複雑な式になってしまった．このままでは，微分方程式を解くことが難しい．</p>
-<h3 id="_5">簡単化して解ける形にする（二兎を追う者は一兎をも得ず）<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
-<p>我々が出会う多くの問題において，<span class="arithmatex">\(\sigma (x,y,t)\)</span>は与えられないことが多く，与えられるのは梁にかかる外力である．梁の単位幅あたりにかかる外力を荷重強度<span class="arithmatex">\(q(x,t)\)</span>とする．</p>
-<p>簡単化するために考えられる方法は，</p>
-<ul>
-<li><span class="arithmatex">\(\sigma = E \dfrac{y}{\rho}\)</span>を断面方向に面積分し<span class="arithmatex">\(y\)</span>を一部消去する．断面に生ずる曲げモーメントの式を得る．</li>
-<li>傾き<span class="arithmatex">\(\theta=\dfrac{dy}{dx} \ll 1\)</span>と仮定する．</li>
-</ul>
-<div class="arithmatex">\[\begin{align}
-\sigma &amp;= E \dfrac{y}{\rho}\\
-\rightarrow \int \sigma y dA &amp;= E \int\dfrac{y^2}{\rho}dA\\
-\rightarrow M &amp;= \frac{EI}{\rho}\label{eq:bending_moment}
-\end{align}\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>荷重強度，剪断力及び曲げモーメントの関係</p>
-<p>荷重強度は，<span class="arithmatex">\(q(x) = - \frac{dS}{dx}\)</span>，<span class="arithmatex">\(S(x)=\frac{dM}{dx}, \frac{dS}{dx} = \frac{d^2M}{dx^2}\)</span>である．</p>
-<div class="arithmatex">\[\begin{equation}
-\frac{d^2 M}{dx^2} = \frac{dS}{dx} = -q
-\end{equation}\]</div>
-</div>
-<p>つまり，曲げモーメントの変化率が剪断力，剪断力の変化率がマイナスの荷重強度である．</p>
-<h3 id="_6">オイラー・ベルヌーイの静的梁方程式<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
-<p>\eqref{eq:bending_moment}からオイラー・ベルヌーイの静的梁方程式は</p>
-<div class="arithmatex">\[\begin{align}
-\rightarrow q &amp;\approx EI \frac{d^4 y}{dx^4}
-\end{align}\]</div>
-<details>
-<summary>考え方</summary>
-\begin{align*}
-\rightarrow M &amp;= \frac{EI}{\rho}\\
-\rightarrow \frac{d^2M}{dx^2} &amp;= \frac{d^2}{dx^2}\left(\frac{EI}{\rho}\right)\\
-\rightarrow -q &amp;= \frac{d^2}{dx^2}\left(\frac{EI}{\rho}\right)\\
-\rightarrow -q &amp;= \frac{d^2}{dx^2}\left(\frac{EI}{\rho}\right)\\
-\rightarrow q &amp;= \frac{d^2}{dx^2}\left(EI \frac{\dfrac{d^2 y}{d x^2}}{\left(1+\left(\dfrac{dy}{dx}\right)^2\right)^{\frac{3}{2}}} \right)\\
-\rightarrow q &amp;\approx EI \frac{d^4 y}{dx^4}
-\end{align*}
-</details>
 
-<h3 id="_7">オイラー・ベルヌーイの動的梁方程式<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
-<p>静的な梁の方程式に，慣性力を加えることで，動的な梁の方程式を得ることができる．<span class="arithmatex">\(\mu\)</span>は単位長さあたりの質量，<span class="arithmatex">\(q\)</span>は単位長さあたりの外力とする．</p>
-<div class="arithmatex">\[\begin{equation}
-\rightarrow -\mu \frac{\partial^2 y}{\partial t^2} + q = EI \frac{\partial^4 y}{\partial x^4}
-\end{equation}\]</div>
-<p><span class="arithmatex">\(y=y_s+y_d\)</span>と分解する．<span class="arithmatex">\(y_s=y_s(x)\)</span>は静的な変位，<span class="arithmatex">\(y_d=y_d(x,t)\)</span>は静的な変位からのずれであり，動的なものである．</p>
-<div class="arithmatex">\[\begin{align}
-\rightarrow \frac{\partial^4 y_d}{\partial x^4} + \frac{\mu}{EI} \frac{\partial^2 y_d}{\partial t^2} &amp;= 0
-\end{align}\]</div>
-<details>
-<summary>考え方</summary>
-\begin{align*}
-\rightarrow -\mu \frac{\partial^2 (y_s+y_d)}{\partial t^2} + q &amp;= EI \frac{\partial^4 (y_s+y_d)}{\partial x^4}\\
-\rightarrow -\mu \frac{\partial^2 y_s}{\partial t^2} -\mu \frac{\partial^2 y_d}{\partial t^2} + q &amp;= EI \frac{\partial^4 y_s}{\partial x^4} + EI \frac{\partial^4 y_d}{\partial x^4}\\
-\rightarrow -\mu \frac{\partial^2 y_d}{\partial t^2} &amp;= EI \frac{\partial^4 y_d}{\partial x^4}\\
-\rightarrow \frac{\partial^4 y_d}{\partial x^4} + \frac{\mu}{EI} \frac{\partial^2 y_d}{\partial t^2} &amp;= 0
-\end{align*}
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "thesis/overview/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["h3vPNjUMstd7rl1jCCMc4g==;hlMpNwS92Y/clfbbBgrT5eeLTKykYYqHCWuD7eW+JUk8loMpHVgRowM6zc5JyRx+i89BRmGWavw8O8gD36QNwSmyIilSpUlUsiB+M9EUqZzBgRpqy15tht+L8kbmXwoj;gU7PlOQCPgLIp1qjpH+VTg=="];
+var encryptcontent_obfuscate = 0;
 
-途中で，$-\mu \frac{\partial^2 y_s}{\partial t^2} + q = EI \frac{\partial^4 y_s}{\partial x^4}$と$\frac{\partial^4 y_s}{\partial x^4}=0$を使った．これは，$y_d$という静的な変位からのずれを表す変位を表す偏微分方程式である．これ以降は，梁を縦に立てたときの変位を考えるので，釣り合いの変位$y_s=0$なので，$y_d$だけを考えることになる．ただし，一般的には，$y_s$についても解く必要があるだろう．
-
-</details>
-
-<h2 id="_8">オイラー・ベルヌーイの動的梁方程式の解法<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
-<p>動的梁方程式を簡単に書くために，<span class="arithmatex">\(\lambda^2 = \frac{\mu}{EI}\)</span>とする．</p>
-<div class="arithmatex">\[\begin{equation}
-\frac{\partial^4 y}{\partial x^4} + \lambda^2\frac{\partial^2 y}{\partial t^2} = 0
-\end{equation}\]</div>
-<p>偏微分方程式を解く方法の基本戦略は，<strong>方程式を常微分方程式に変換する</strong>ことである．方程式の形から考えて<strong>変数分離法</strong>がうまくいきそうである．<span class="arithmatex">\(y(x,t) = X(x)T(t)\)</span>と変数分離し，元の方程式に代入すると，</p>
-<div class="arithmatex">\[\begin{align}
-\rightarrow T X'''' &amp;= -\lambda^2 XT''\\
-\rightarrow \frac{X''''}{X} &amp;= -\lambda^2 \frac{T''}{T} = \beta^4
-\end{align}\]</div>
-<p>このあとの計算を綺麗に整理するために，両辺を<span class="arithmatex">\(\beta^4\)</span>だとした．また，<span class="arithmatex">\(T''\)</span>は<span class="arithmatex">\(\frac{\partial^2 T}{\partial t^2}\)</span>を表す．こうして，変数分離法によって，もともと１つだった偏微分方程式を２つの常微分方程式に分解することができた．</p>
-<div class="arithmatex">\[\begin{equation}
-\frac{d^4 X}{d x^4} =\beta^4 X,\quad \frac{d ^2 T}{d t^2} = - \frac{\beta^4}{\lambda^2} T
-\end{equation}\]</div>
-<h4 id="_9">一般解<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
-<p>まずは，<span class="arithmatex">\(\frac{d ^2 T}{d t^2} + \omega^2T = 0\,,\omega=\frac{\beta^2}{\lambda}\)</span>から考える．この式の一般解は，</p>
-<div class="arithmatex">\[\begin{equation}
-T(t) = A \cos(\omega t) + B \sin(\omega t)
-\end{equation}\]</div>
-<p>次に，<span class="arithmatex">\(\frac{d ^4 X}{d t^4} = X\)</span>の一般解を考える．線形の方程式であるので，重ね合わせの原理によって，異なる解の線形結合もまた解であり，各々に係数をかけて足し合わせることで，一般解を得ることができる．<span class="arithmatex">\(X=\exp(p x)\)</span>として代入すると，<span class="arithmatex">\(p=\pm i \beta, \pm \beta\)</span>の４つの解が得られる．このことから，一般解は，</p>
-<div class="arithmatex">\[\begin{equation}
-X(x) = D_1 e^{\beta x} + D_2 e^{-\beta x} + D_3 e^{i\beta x} + D_4 e^{-i\beta x}
-\end{equation}\]</div>
-<p>これは書き換えずにこのままの形を保ち，境界条件から係数を求めていくことにする．</p>
-<h4 id="_10">境界条件<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
-<p>境界条件は，固定端と自由端を持つ場合を考える．固定端は<span class="arithmatex">\(x=0\)</span>，自由端は<span class="arithmatex">\(x=\ell\)</span>とする．固定端では，変位<span class="arithmatex">\(y\)</span>と曲げモーメントがゼロになる．</p>
-<p><a href="../../items/%E6%9B%B2%E3%81%91%E3%82%99%E6%8C%AF%E5%8B%95%E3%81%AE%E5%9F%BA%E6%9C%AC%E5%BC%8F.nb">cable/曲げ振動の基本式.nb</a></p>
-<figure>
-    <img alt="梁の曲がりの時間変化" src="../../items/hari_sindou.gif" width="90%">
-    <figcaption>梁の曲がりの時間変化</figcaption>
-</figure>
-<h2 id="_11">もう少し複雑な問題<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
-<p>静的な変位がゼロではない場合を考える．上部端点に変位に比例する外力が加わる場合を考える．</p>
-<div class="arithmatex">\[\begin{align}
-\rightarrow -\mu \frac{\partial^2 (y_s+y_d)}{\partial t^2} + k(y_s+y_d-y_0) &amp;= EI \frac{\partial^4 (y_s+y_d)}{\partial x^4}\\
-\rightarrow -\mu \frac{\partial^2 y_s}{\partial t^2} -\mu \frac{\partial^2 y_d}{\partial t^2} + k(y_s+y_d-y_0) &amp;= EI \frac{\partial^4 y_s}{\partial x^4} + EI \frac{\partial^4 y_d}{\partial x^4}
-\end{align}\]</div>
-<p>静的な変位<span class="arithmatex">\(y_s\)</span>は次を満たすとする．</p>
-<div class="arithmatex">\[\begin{equation}
-k(y_s-y_0) = EI \frac{\partial^4 y_s}{\partial x^4},\quad\frac{\partial^2 y_s}{\partial t^2} = 0
-\end{equation}\]</div>
-<p>そうすると，<span class="arithmatex">\(y_d\)</span>に関する方程式は，</p>
-<div class="arithmatex">\[\begin{equation}
--\mu \frac{\partial^2 y_d}{\partial t^2} + k y_d = EI \frac{\partial^4 y_d}{\partial x^4}
-\end{equation}\]</div>
-<h3 id="_12">非線形振動への拡張<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3></div>
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 

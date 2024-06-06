@@ -616,7 +616,7 @@
         
   
   <span class="md-ellipsis">
-    Moon Poolの共振周波数
+    ムーンプール共振
   </span>
   
 
@@ -1137,127 +1137,33 @@
   
 
 
-<div><h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
-<p>斜張橋のケーブルの固有振動数が橋梁全体の固有振動の倍数に近い場合，風などの外力に伴うケーブル振動が橋桁振動を大きく励起させたり，地震による橋梁の振動がケーブル振動を大きく励起させたり，いわゆる内部共振が発生することがある．この現象は，橋梁自体の耐性や通行者の安全性に影響を及ぼすため，橋梁の設計や維持管理において重要である．</p>
-<p>藤野ら(1991)は，Lagrangeの定式化に基づく梁とケーブルを連成させた非線形運動方程式を導出し，摂動法を用いて定常解を求めている．解と実験結果は良好な一致を示し，この理論を利用することで，実際の斜張橋の内部共振現象を予測することができる．この解析方法は，数式を通してケーブルと梁の相互作用を捉えることができる点で，FEMなどのような数値的な方法と比べて優れている．Fujino et al. (1995)は，藤野ら(1991)では考慮されていなかった，ケーブルの面内振動をも考慮した定常解を求めている．しかし，藤野の解析における橋桁は片持ち梁，つまり斜張橋の主塔は完全に固定されており，主塔の振動が考慮されていない．</p>
-<p>そこで，本研究は，藤野の方法をさらに発展させ，主塔-ケーブル-梁系を連成させたモード解析をLagrangeの方程式を用いて行い，内部共振現象の理解を深めることを目的とする．数学的な解析に対応する実験を行い，実験結果との比較を通して，理論の改善・妥当性の検証を行う．</p>
-<h3 id="_1">独創性<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p>以前と比べて計算機の性能が大幅に向上した現在において，橋梁の解析の多くは，有限要素法のような数値的な方法が主流である．しかし，斜張橋の振動に関連する問題が今もなお生じていることは，数値的な方法を使った試行錯誤だけでは簡単に解決できない問題があることを示している．理論的アプローチは対象が過度にシンプルになる傾向があるものの橋の振動を抑制する直感的な指針を与えてくれる可能性がある．本研究で扱う，主塔-ケーブル-梁系の連成解析は，従来の理論よりも実際の橋梁に近いため，さらに実用的な指針を与えることが期待される．</p>
-<h3 id="_2">成果の活用<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<p>主塔-ケーブル-梁の連成解析の結果を数式上で理解することで，主塔-ケーブル-梁の相互作用をより直感的に理解することができる．また，実際の斜張橋の設計や維持管理において，内部共振現象を予測するための基礎となる．さらに，橋梁の振動を効率的に抑制するダンパーやアクティブ制御の設計に役立てることができると考えられる．</p>
-<h3 id="_3">今後の展望<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
-<p>本研究では，主塔-ケーブル-梁という実際の橋梁と比べるとシンプルなモデルを対象としている．人の手で，これをさらに複雑な橋梁モデルにその都度適用することは困難である．そこで，橋桁の長さや，ケーブルの設置位置や角度，ケーブルの本数などを変更することだけで，この理論に基づいた橋梁の振動特性を予測することができるソフトウェアの開発を考えている．</p>
-<ul>
-<li>
-<p><a href="https://doi.org/10.2208/jscej.1991.432_109">陽三藤野, WARNITCHAI, P., &amp; PACHECO, B. M. (1991). ケーブル・はりモデルを用いた斜張橋の内部共振に関する実験と解析. 土木学会論文集, 1991(432), 109–118. https://doi.org/10.2208/jscej.1991.432_109</a></p>
-</li>
-<li>
-<p><a href="Fujino,%20Y.,%20Warnitchai,%20P.,%20&amp;%20Pacheco,%20B.%20M.%20(1993).%20An%20experimental%20and%20analytical%20study%20of%20autoparametric%20resonance%20in%20a%203DOF%20model%20of%20cable-stayed-beam.%20Nonlinear%20Dynamics,%204(2),%20111%E2%80%93138.%20https://doi.org/10.1007/BF00045250">Fujino, Y., Warnitchai, P., &amp; Pacheco, B. M. (1993). An experimental and analytical study of autoparametric resonance in a 3DOF model of cable-stayed-beam. Nonlinear Dynamics, 4(2), 111–138. https://doi.org/10.1007/BF00045250</a></p>
-</li>
-<li>
-<p><a href="Warnitchai,%20P.,%20Fujino,%20Y.,%20Pacheco,%20B.%20M.,%20&amp;%20Agret,%20R.%20(1993).%20An%20experimental%20study%20on%20active%20tendon%20control%20of%20cable%E2%80%90stayed%20bridges.%20Earthquake%20Engineering%20&amp;%20Structural%20Dynamics,%2022(2),%2093%E2%80%93111.%20https://doi.org/10.1002/eqe.4290220202">Warnitchai, P., Fujino, Y., Pacheco, B. M., &amp; Agret, R. (1993). An experimental study on active tendon control of cable‐stayed bridges. Earthquake Engineering &amp; Structural Dynamics, 22(2), 93–111. https://doi.org/10.1002/eqe.4290220202</a></p>
-</li>
-</ul>
-<h3 id="_4">梁とケーブルの連成解析の比較<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
-<h2 id="_5">直線ケーブルを使ったモデリング<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
-<p>ケーブルの破断に伴う衝撃力の再現，そしてその衝撃力を受ける橋梁の挙動解析は，橋梁の設計や維持管理において重要である．
-しかし，ケーブルの挙動を数値的に再現することや，衝撃力を受けた橋梁の挙動解析は，どちらも大変複雑で，未だに広くコンセンサスの取れた方法は存在しない．</p>
-<!-- 過去２０年にわたりケーブルの振動や破断に関する研究が行われてきたが，ケーブルの挙動解析のための統一した理論は静的か動的に関わらず未だ存在しない．-->
+<div id="mkdocs-encrypted-content" style="display:none">AC1latWovFrKjnpIosmLfA==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>PASSWORD REQUIRED</h1>
+        <p>write out</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
 
-<p>ケーブルの支配方程式が非線形であり，かつ悪条件であるため，精確にそして安定して解くことが難しく，そのため大胆な仮定を置いて解析することが多い．
-また，衝撃力を受ける橋梁の挙動は，微小変位の仮定に基づく梁の線形振動方程式の範疇を超える可能性が考えられるものの，このことは十分に考慮されていない．適用範囲を超えてしまっていた場合，橋梁の耐性，安全性を過大評価することになりかねないため，解析手法の適用範囲を把握しておくことが重要である．</p>
-<h2 id="_6">手法<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
-<h3 id="_7">梁の振動解析について<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
-<p>大別して以下の２つの手法を用いて，ケーブル破断に伴う衝撃力の再現を行う：</p>
-<ol>
-<li>
-<p>解析的計算（ケーブル破断衝撃力は簡単化する必要がある）（微小変位の仮定あり）</p>
-<ul>
-<li>梁の振動の方程式を解く方法</li>
-<li>線形バネでケーブルの力を代替する</li>
-</ul>
-</li>
-<li>
-<p>数値的計算（FEM）（複雑なケーブル破断衝撃力の境界条件を課すことができる）</p>
-<ol>
-<li>梁要素（微小変位の仮定あり）</li>
-<li>梁要素（微小変位の仮定なし）</li>
-<li>四面体要素（微小変位の仮定なし，引っ張り応力の考慮も可能）</li>
-</ol>
-</li>
-</ol>
-<h3 id="_8">ケーブルの挙動と破断に伴う衝撃力の再現について<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
-<p>ケーブルのモデリング方法として，ランプドマス法や有限要素法（FEM）がある．</p>
-<p>理論に関する日本語の参考資料：</p>
-<p><a href="http://library.jsce.or.jp/Image_DB/committee/steel_structure/bklist/47254.html">鋼構造シリーズ１１　ケーブル・スペース構造の基礎と応用</a></p>
-<h2 id="1">1. 梁の振動の方程式を解く方法<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
-<p>ケーブルの力をシンプルな線形バネと仮定し，それを境界条件として，梁の振動方程式を解く方法である．これは最も単純化されたモデルであるため，得られる結果は，実験結果とは大きく異なると考えられる．ただし，課した仮定がシンプルで，かつ連続的な解が得られるため，続く数値解析結果を考察する上で比較対象として必要である．</p>
-<h2 id="2-fem">2. 数値的計算(FEM)<a class="headerlink" href="#2-fem" title="Permanent link">¶</a></h2>
-<p>実際のケーブルの挙動は，線形バネのような簡単な関数として与えることはできず，梁の振動方程式とは別に，ケーブルの支配方程式を解かなければならない．そのため，より実際の現象を再現するためには，梁がケーブルから受ける力をシミュレートしつつ，梁の振動もシミュレートしなければならない．本研究では，梁の動的解析として標準的に利用されている，梁要素と四面体要素を使ったFEM解析を行い，その結果を解析解も含めて相互比較する．具体的に，梁要素で使う方程式は，１で扱う梁の振動方程式であり，境界条件が1-aと同じ線形バネの力であれば，1-aと等しい結果が得られるはずである．ただし，複雑なケーブル挙動の考慮は，FEMのような数値解析でしか得られない．２つ目の四面体を使った解析は，曲げによる応力だけでなく引っ張りによる応力も考慮でき，さらに微小変位の仮定を課さないため，定式上，より実際に近いモデルである．</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">解析手法  ケーブルのモデリング（梁上端での境界条件）　</th>
-<th style="text-align: center;">線形ケーブル</th>
-<th style="text-align: center;">動的ケーブル</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">解析的計算（微小変位の仮定あり）</td>
-<td style="text-align: center;">o</td>
-<td style="text-align: center;">o</td>
-</tr>
-<tr>
-<td style="text-align: center;">梁要素（微小変位の仮定あり）</td>
-<td style="text-align: center;">o</td>
-<td style="text-align: center;">o</td>
-</tr>
-<tr>
-<td style="text-align: center;">梁要素（微小変位の仮定なし）</td>
-<td style="text-align: center;">o</td>
-<td style="text-align: center;">o</td>
-</tr>
-<tr>
-<td style="text-align: center;">四面体要素（微小変位の仮定なし，引っ張り応力の考慮も可能）</td>
-<td style="text-align: center;">o</td>
-<td style="text-align: center;">o</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_9">研究の概要<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
-<h2 id="_10">研究の内容の新規性<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
-<h2 id="_11">独創性<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
-<hr>
-<p>→</p>
-<h1 id="_12">ケーブル破断に伴う衝撃力の再現<a class="headerlink" href="#_12" title="Permanent link">¶</a></h1>
-<ul>
-<li>Bertrand, C., Acary, V., Lamarque, C. ‐H., &amp; Ture Savadkoohi, A. (2020). A robust and efficient numerical finite element method for cables. International Journal for Numerical Methods in Engineering, 121(18), 4157–4186. <a href="https://doi.org/10.1002/nme.6435">https://doi.org/10.1002/nme.6435</a></li>
-</ul>
-<p>過去２０年にわたって，ケーブルの振動や破断に関する研究が行われてきた．しかし，静的，動的に関わらずケーブルの挙動解析のための統一した理論はまだ存在しない．</p>
-<h2 id="_13">ケーブルの振動<a class="headerlink" href="#_13" title="Permanent link">¶</a></h2>
-<p>ケーブルに沿った座標系を考え，沿った距離を<span class="arithmatex">\(S\)</span>とする．ケーブルは３次元空間において，<span class="arithmatex">\(x,y,z\)</span>座標系で表現される．ケーブルの位置を<span class="arithmatex">\({\bf x}(S,t)\)</span>とする．<span class="arithmatex">\(\frac{d{\bf x}}{dS}\)</span>は接線ベクトルであり，<span class="arithmatex">\(\frac{d^2{\bf x}}{dS^2}\)</span>は曲率ベクトルである．もし，ケーブルが全く直線であれば，曲率ベクトルはゼロであり，伸びていなければ，接線ベクトルの大きさは1である．このことから，ケーブルの歪みが接線ベクトルを使って表現できる．</p>
-<div class="arithmatex">\[\begin{equation}
-\frac{\left\|\frac{\partial {\bf x}}{\partial S}\right\| - 1}{1} = \left\|\frac{\partial {\bf x}}{\partial S}\right\| - 1 = \varepsilon(S,t)
-\end{equation}\]</div>
-<p>線形弾性体の場合，フックの法則により，応力と歪みの関係は，</p>
-<div class="arithmatex">\[\begin{align}
-\sigma(S,t) &amp;= E \varepsilon(S,t)\\
-\rightarrow \sigma(S,t)A{\bf e}(S,t) &amp;= E \varepsilon(S,t)A{\bf e}(S,t)
-\end{align}\]</div>
-<p>ケーブルに沿った力として<span class="arithmatex">\({\bf R}(S,t)=\sigma(S,t)A{\bf e}(S,t)\)</span>を定義する．ただし，<span class="arithmatex">\({\bf e}(S,t)\)</span>はケーブルの単位接線ベクトルである．</p>
-<h2 id="_14">ケーブルの運動方程式<a class="headerlink" href="#_14" title="Permanent link">¶</a></h2>
-<p>外力が重力だけである場合，ケーブルの運動方程式は，</p>
-<div class="arithmatex">\[\begin{equation}
-\rho(S)\frac{\partial^2 {\bf x}}{\partial t^2} = \frac{\partial {\bf R}}{\partial S} + \rho(S){\bf g}
-\end{equation}\]</div>
-<p><span class="arithmatex">\({\bf g}\)</span>は重力ベクトルで多くの場合<span class="arithmatex">\({\bf g}=(0,0,-g)\)</span>である．<span class="arithmatex">\(\rho(S)\)</span>はケーブルの単位長さあたりの質量である．適当に無次元化すると，</p>
-<div class="arithmatex">\[\begin{equation}
-\frac{\partial^2 {\bf x}}{\partial t^2} = \frac{\partial {\bf R}}{\partial S} + {\bf g}
-\end{equation}\]</div>
-<!-- ニュートンの第２法則が出発点となる．
-つまり，微小要素$\Delta x$で，力と慣性力とを等しいという運動方程式から出発する．
-慣性力は，微小要素$\Delta x$の質量$\rho A \Delta x$に対して，$\rho A \Delta x \frac{\partial^2 y}{\partial t^2}$である． --></div>
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "research_beam_cable/my_research_cable_old/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["h3vPNjUMstd7rl1jCCMc4g==;hlMpNwS92Y/clfbbBgrT5eeLTKykYYqHCWuD7eW+JUk8loMpHVgRowM6zc5JyRx+i89BRmGWavw8O8gD36QNwSmyIilSpUlUsiB+M9EUqZzBgRpqy15tht+L8kbmXwoj;gU7PlOQCPgLIp1qjpH+VTg=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 

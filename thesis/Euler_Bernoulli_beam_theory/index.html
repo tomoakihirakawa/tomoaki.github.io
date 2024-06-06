@@ -616,7 +616,7 @@
         
   
   <span class="md-ellipsis">
-    Moon Poolの共振周波数
+    ムーンプール共振
   </span>
   
 
@@ -1065,140 +1065,33 @@
   
 
 
-  <h1>Euler Bernoulli beam theory</h1>
-
-<div><h2 id="_1">棒状構造物の曲げ振動方程式（オイラー・ベルヌーイの動的梁方程式）<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>得たい式は，既知の情報である構造物が受ける外力と，構造物の変位<span class="arithmatex">\(y(x,t)\)</span>との関係を示す式である．角度<span class="arithmatex">\(\theta\)</span>や曲率<span class="arithmatex">\(\rho\)</span>などは消去して，<span class="arithmatex">\(y(x,t)\)</span>だけにしたい．<span class="arithmatex">\(d\ell\)</span>の微小要素を抜き出して考える．曲げによって<span class="arithmatex">\(d\ell\)</span>から伸縮した長さを<span class="arithmatex">\(\Delta d\ell\)</span>とすると，その位置での歪みは，<span class="arithmatex">\(\varepsilon = {\Delta d\ell}/{d\ell}\)</span>となる．弾性係数を<span class="arithmatex">\(E\)</span>とすると，応力<span class="arithmatex">\(\sigma = \sigma (x, y,t)\)</span>は</p>
-<div class="arithmatex">\[\begin{equation}
-\sigma = E \dfrac{\Delta d\ell}{d\ell}\label{eq:stress}
-\end{equation}\]</div>
-<p>\eqref{eq:stress}となる．<span class="arithmatex">\({\Delta d\ell}\)</span>は断面の位置<span class="arithmatex">\(y\)</span>や時間<span class="arithmatex">\(t\)</span>によって異なるので，<span class="arithmatex">\({\Delta d\ell}={\Delta d\ell}(y,t)\)</span>と考えられる．具体的には，<span class="arithmatex">\(y\)</span>を中立軸からの距離として，曲率<span class="arithmatex">\(\rho=\rho(x,t)\)</span>を使うと，</p>
-<div class="arithmatex">\[\begin{equation}
-\begin{aligned}
-\rho \theta&amp;= d\ell\\
-\rightarrow (\rho+y) \theta &amp;= d\ell + \Delta d\ell
-\end{aligned}
-\label{eq:curvature}
-\end{equation}\]</div>
-<p>\eqref{eq:curvature}から，<span class="arithmatex">\(\frac{\Delta d\ell}{d\ell} = \frac{y}{\rho}\)</span>とわかる．</p>
-<div class="arithmatex">\[\begin{equation}
-\sigma (x,y,t)= E \dfrac{y(x,t)}{\rho(x,t)}\\
-\end{equation}\]</div>
-<p>となる．曲率<span class="arithmatex">\(\rho\)</span>は直接計算が難しいので，変位の微分を使って書き換える．次の関係式を使う．</p>
-<div class="arithmatex">\[\begin{equation}
-\frac{1}{\rho} = - \frac{d \theta}{d s} = - \frac{d \theta}{d x}\frac{d x}{d s} = - \dfrac{\dfrac{d^2 y}{d x^2}}{\left(1+\left(\dfrac{dy}{dx}\right)^2\right)^{\frac{3}{2}}}
-\end{equation}\]</div>
-<p>となる．よって，</p>
-<div class="arithmatex">\[\begin{equation}
-\sigma (x,y,t)= -E y \frac{\dfrac{d^2 y}{d x^2}}{\left(1+\left(\dfrac{dy}{dx}\right)^2\right)^{\frac{3}{2}}}
-\end{equation}\]</div>
-<p>となる．とても複雑な式になってしまった．このままでは，微分方程式を解くことが難しい．</p>
-<h3 id="_2">簡単化して解ける形にする（二兎を追う者は一兎をも得ず）<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<p>我々が出会う多くの問題において，<span class="arithmatex">\(\sigma (x,y,t)\)</span>は与えられないことが多く，与えられるのは梁にかかる外力である．梁の単位幅あたりにかかる外力を荷重強度<span class="arithmatex">\(q(x,t)\)</span>とする．</p>
-<p>簡単化するために考えられる方法は，</p>
-<ul>
-<li><span class="arithmatex">\(\sigma = E \dfrac{y}{\rho}\)</span>を断面方向に面積分し<span class="arithmatex">\(y\)</span>を一部消去する．断面に生ずる曲げモーメントの式を得る．</li>
-<li>傾き<span class="arithmatex">\(\theta=\dfrac{dy}{dx} \ll 1\)</span>と仮定する．</li>
-</ul>
-<div class="arithmatex">\[\begin{align}
-\sigma &amp;= E \dfrac{y}{\rho}\\
-\rightarrow \int \sigma y dA &amp;= E \int\dfrac{y^2}{\rho}dA\\
-\rightarrow M &amp;= \frac{EI}{\rho}\label{eq:bending_moment}
-\end{align}\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>荷重強度，剪断力及び曲げモーメントの関係</p>
-<p>荷重強度は，<span class="arithmatex">\(q(x) = - \frac{dS}{dx}\)</span>，<span class="arithmatex">\(S(x)=\frac{dM}{dx}, \frac{dS}{dx} = \frac{d^2M}{dx^2}\)</span>である．</p>
-<div class="arithmatex">\[\begin{equation}
-\frac{d^2 M}{dx^2} = \frac{dS}{dx} = -q
-\end{equation}\]</div>
+<div id="mkdocs-encrypted-content" style="display:none">sk3qRqkVlyFR+DrBvp1v5g==;Qn9GibdH/AyD/y3t7Sw+9buPa5uzpQYZjjb3jPaveUjHtKrFPsLzlzQ96jwDNNZKgYRfOgBa/D1CxaarG8rEtLkhGpd7sv7IMzi4zrV66OHPJw5Vp/UoFX2Ux1cm+gXGObLVk37v1CQHU2bIPjXEsBh6uzE3HA2RR1Zn/3YTJm00yPr9z20xrhMaPuradszklmylCxaI7QrC5+/zHiH5ExOzblhoUPtkNx1Bj99K83YMlJyUcoYFMrlE2jkn+3RuItjm2m5PJH257ckjpmevnB0I5b8ft7Sh+C77fQlvvdESYfyA6yVZf+km18dd15yb4W28/iPSG+GAia6Z1TcuQED4YMm7Cu+tF9H9su2u/hMVQSqiEaE9MrWuCOu7H4SlDWph92RQte2PUNoWaATWT7iEacw8wM8TWi78T5fgyBNI1aW5ANTEiioPmLw58EJYTkBMK6pC8O/7VwTmgmn4XWqerja3rtEreGJvQxMpkGEPWcpACLBlQvfoxBOVJKcO0oRSEb36fvbfOs4k22ygHPajcPjyo03UGlU4PoNve2pR3Y78a5mHh2TYhz04vhZvZH9owgGJFWILVcjVx/03mcp0ct111JAILYP9UrFSWIf9ap6ZRRHkmCI3Ix+jOx79VsKOcx3akfVP2aDFqQTPbEP3yFdeKRpDeLVLzwt+C/Ya3FQtLyUyM99u4xGgvnh3/aNkn99JeS8exWWx5oCqFcHmQ3Jm9hyy8NMEOW62+1PynXSlbgUZgJpwgX0x9zDJRXvVRq+OsNT3RNsxRc7r5LDWW0ErhLqcu90L0FEKzjY8di0b3T+yA3mugz9b7geluw/N9zdVHhjWEwlKfAuXZRo6OD/tin7a+faR2e6wCbkSDfA2YJXwbVqRUokHjBWyK8eN+vmBuIyEkCIHIq98ynqmQRPf2BsQF4on0nJY8PXBtadjhch9jscTSmVetR7MwsF2NQ3ivvB1tmPHULPn981zp8AJWC1VWmXkaLoYkOXyHS9R8+Qg3QaMMUS2geEKgWXMoSgDspDn+r6lgEGDlfjrr5IPygR5Cl0t+K4lOE9n4HZ//KTZofOunZLglVxmcLiYlihn97ijSgA017JC/ddQxapDoABgs1ejDpGZGwEvtgRzhUdg8ZwY1DVLz1LqAVu/+BeO/ZELeN/5NCo/a2TA8F0easbi3YKbLFHcl1W4g0hMWx9tgw2j/nkIiVLh5XHGAooKERDP40Occs+5HqaD8jaDT7RxCzl5eteOnR/60oqYiW54TeAnslh0RXUvlO1MFBzu2HU6Td4zdt3Wkw+Gq3RP0OYeTqfE9AO67oO7xZRB6qsEwM3dnTBnyMHIjwR0BrI2JqTlz/oySc5HP5sqSjbfxaDh+kjP1kj+CQlIDhxhLnDDdLq2NrqXw7Crqu+BxE7wAnZK45Mxp30R4Um91AnDJsQwQnYLPU6jdcMoJ6d1Yh5/bOpGex7pq4w4ocRWY/gRelBYckDG0Sq7U5rykGo95g0Pdbx8c4iDBkJbLCj3tTeJN/yUN236oAmvDxPV2O7J1eSCvW4O3CNqUJeu0EyQ0QqRTyVcEcgY6EmFMQTLmOpNMiVy8tBOzUvBXVFIraEkWLw0jXj5jlCGfI7CiiJAjGM9idIJVTi3dpj1cxRnCBWMsPUwn4dUzTu/BUEY57LsQ6bD2oOXEwf+X3pfdVg0muiLCpKEUVZLgp7l9nZCG2FJVcbh8+MWXfKuvHlbGkNpJFauh7IPJTgcbvZKxZgQDsQkOVVvaCgSTGxbtysbsyFX5nC7Utqy7eqACHWR6D0QMLjtZ+XLPlcgAtPTz2WwkiUiD0Nm1lPL/pIVA2StATVjPfF07nhhY044g0mAfToulaNjtcGO7UiAEiia1Xq5dhRqfY2xLp/tquLDZEML4gagdB3A2Yu3jC86zKrA3PD4dUKZXQqk/aaP5yfPEiKAMB4kk7Vlv6G0iiAqXgABTl3Df5/xDJIcQnMPV+aiCNzbBpk6o0gUQ9+1F3Uyd6Vtx2mO23HjjsF5JHxRjoLF9uutmedArmAE+JeUGTRYO+cknVRhLsGiCIWeinlN4WHlcOeD+DuQ3Q7Ws12cmcrU8Hh4BWwQUP+gUZm4fsRxGNSgIOB4DWIXSzhQZbX+rNt9e5YsKlnoEgHAnF2fKdDbsi8VDN9P7Zrp9868e/o1GkVGeHXcR3k/mVCWZMl3l8zSRA0NegLF2q0/UsvPBtk747FwSTm+DLgfx7eIfRt8SpnxBsYuNmXvot5XzqlEY7vodIYA7VH0kONkOqIUt8hcmGa1Cd+GJkmy7vBwoxkGX6LEc1JRnNsF5Zw5tH8mbWk6eUMICxtYV0t1eC6hCnncYdLn1Yz0dFG2lZh6xGw/oclppRWeXk518eJpRItW+AA/Ef/n5ldG0N2kbu0uxHfZrg7xkW/95HXBnkch/0CRYg0b9PnNqlavwnh08/xFckDXt9BuCACBZCi7UAKfemzKtX3pmagkYiT13zox/KNe49dhFG5B9XFNSUDYAW9wMyRonh6W6xy+NpKroBiPrr33CA4ku8DrucdyHhPmgMt/1qre1HdHHnDVM2WplInBgwORV/Ea6VABuiJ/82H97xA5/zRZ8SBW0bdTKY6YTCeMaH8pPlCEedEK4IvwYMdhPN4YcEdzSWaW96ptjqFFq5bry/gdAJtv6skJ/Uvd9ff6V6/OdCBZwpxTmMOKgdb6xPvA7iAPkYjmcNVD6Tsd+4j0JwEN4IlUdFQ+FzhuPt7usm75MaD9E2T9J6wjdHwyzSOEO7Gsnb7SGFa0G4crHatBNFnTGyrWS1w7QMZpzXpaDfdXE2u0hTTOuJU3six5mlLJiIsAuPRsXvlWBt5rG8vELRGv3IU7HvpykPfNqKAOKXYHsWr6iydLKueQukRVgA7QsBYWLg9E2P7fRRx7WZCzTvdOs2fbnU9gtBXM8/abTkCJFCkLSYBRf+uVECpq6fOmrMw26EkkLD4UW6UDd6RdSfPEFZ2eyhWVI3gAe0bv9bVL3OeyVC/dLFktbl/RZE7E96InkU4cwc+v93xKn6cMNLlkfwJ88+Kn+UuW9Kz9/deZB3PoqMpWi+S8vagKiNxi/tQF7DdAScdf/JWvgD5NM4UleMfM8FI35JzhOgcXAAGHyA2xUb/0nkwVVIRQPOpOoNycOfvEZvambV58eWXeNLQ1jylFSFJ4R8cPXJQcnThHJQpJxWFj+UebgeFehgBspOBAoKlGqM2OqgUGuYqc0QrkVc8P1YNmIgJ8xcwK6aYofsXBfznYijG9p/yojELoGLcJOKef3y0hdEhbx0MjDJ89KTyGgdIPGzJUV7qQ7zi+RSR17HEP75OuSz9zLca/i5dBllwIY3LhyQBQGG+I05cIc7qrWMPlCDeFF+tV146lL9Dzox1vVVQWED+JYxa4DQ3Vi0lixVuzxz4N0gFflEJPAGjTCN5VfgmJflmiq7vMHfd/n7fgm3lAlvnKbFKpPZ7tzqMCTlAEtvIsI6m+fkQTvqkwwlWZRGhHfPnv3G2TELb1lQYMJKQyB5MFgUZfYgwOQLd7jzfx0cImJLFG9ZbU/RaFDXs6uiWaCqLMeQ/AkEd5QYghyt7FF2ugHe2DuY8ACbjLgcYat+Se+bz0Od0cvSSX4BtOqSc6ECCckc89rywA3W8QyhYKbLmfEwsRBU/r9rSWeuAWLlhzzAGrOxTTfXECg9LZe0jCh4KjomtMEbm3qkMEecsYU3BsN0VPn24utLrrAtCpc15h5UcXr8BosxjeMBtjcTdH07I7Os0y6EI6NOYNzMpGiAyMGWrkgOd+In88yj3ctXNUouIcI0siEaWX34nG+2x0EV2RYre06NJFG77pAxpK3yF+ixioY80+iQ+oW3FOBozEKfnSb0AxzjyirYE4GTCmPVx7WcNr0uu7IR3xdUxjw9yQc5xzGwm1kZOceeSPprLkcgMKISA4K7vxL8+uUG5tBKyHzZb80G/0Kqi8B5RGaridUOvXQS1K9eNzFC9sDt5FROl1JRWTB42fBJDaoCMfaKmzRUwnT6h6CcR98LqBKp63oW7xbRXw5Bm85BGNAf6OH5TENb69Av/KggH92UEDCaED9QbgHCxHeM9+6qkoAj6BqgRpyCRHD4dcTtxTkQKBo3n5xmIomrzw4ZQ/cHa4EmCU3GvFjNK7dnnwv5+QGD9tO7BdAx8lyOMFHjrSnKNrRIl3U8bJel3bdtGU546ev/G8e/vJOiRII00ccEm1KuIAQoOPFYAfGp1MyeSJPIKCu7On6bGmtpRqteuz+BLYCqOWcyipJfJiBr+89CETFBSsw6zhaOpcwo1Que3cFnQ5dNyOX+pI68g99tUkPCX8hWM9LRPKmNKcmFnTyqMs42mycqkBDsE37dZdnlw29EtQswrGCAHMQa4+UNq0t9lT+x8rLVnu5yyaFm2DccVfwpWZxHjJXLsPS+2bYSzusfULpzkPUbifcLDNzQ5nJbMDV1nj2ZXngz90+7QmFGNtCofgbsEseff28nglmbd2wqPcUraIATM9FZ6U6ZVyA1WgsQGe4VStECf35UMf2XYitMtIklmvwf2EZ/z6qRb/DEMWIN3qBmjcR1ZwNzQwagWoal8UO4uRwW+GXkqgbF8/4b2d8pIqhL6w9hwwV0SLI/x4N2YQ/+UAZWX7YrZrjwx72eJ6sEQKmZ3LOXLVAlH0WoOCT2XZYjdaUGRZDas8eCriLmJ00FRRQwG22iUtKHp8jANW4t1x2Cgm/6UU074uRRgUy5uchjeYcA1iiffAsb/Oa9xU93DrxZMw796TN3TVZcf5eyGN6uPkImBrANu/d+nfzPEbNvWsDq9LH4iLw1cntC6TqNjJt+zOgELOQftQAS4A+D9766BH9Uf72mDIx6WW8IQyWtlOVQmr56acZGtI8eH97U8cp/sN5v4/fKxKRCHj173dMp84d0cr8jZW5VGw6rsmPBmOJ3VEOBNvP9+MDCrGfq89AMRaV3w7dDS9e8baDmkaK4CKNT+lLjStc1bsoNbozx8mh2zrSxbLJYkzoJr3cf3KFecSLcvYH+nz2uRVVB8A4YQcpSyvdFenAqxLhdF8mQ/KQdnMKrqd3ViTkmqMJd6HZB3v2UNQEtoH3fXtiJlMgaSfBBywnVbCeNdJkHfUUffEEYovIXI9S88CgCDosB6+BInsLzvIMn1Amg6Ca1m7YhKutivGzXKCve64z3v6s68xSjE/zpc0UBZUgctC7zbWsbxIGBzAC2wf/WycPvtn9yTLS/Lg3WsStGAkZG2I+x8dC/K31bXvARLJh6XjIAQEr8swKe94SldyxJ4xdNHEfCa1TKMVXnTkMFDV65dtZzW4X7RepfS0kW71fejiKs2XgYCjhtwzgeWrEgT7E2WhHDjaRr2sW2EUKlc2HSCM84wmiaS13A1XDe3wT/4Q7Da7TlEfi7o6mfBaZEjMoWXygEtg2Jr3lLyIvfk+GB1nrkMqpB1Ea+0ukCJUDCwZnjEnWW5a/oKE+HG8gs13D/wtFt9crqtvGR8FEIgjvw3cj85yvG+6p55g1n9/8NY4yuDS+Famjio+/FqlTdEo+Zq9RImb+ktC/d51ornWnBMye1qNcfw2TV2PrzU9gc8oDW1joi6coxRUbdQkTuaXeQXIroDY91GMwFEB3gtAuSILG1Jjth9A7X63qCqYiE7xNowqGiH3poXTyvb1qUTDr2kPJUc9x5ZHgXJTH++NJJfcL94UBv05u/djNb6EbO99Kqp5q5wg6jVVKTk5vUEKCdQMCUXijMyYIRKv87I2YWGMqYao16ecOHqxqDM+NaSwEx0KxeeM57eboEoHD8l53Ef3ptetCOf5EVLvuAmnTenc02moACcmwOxNX42a9cIjf5xqCjhyhqLGPD8AuPScgf469l3NeX9XIGTaNED7ylKB4tEGdbDTRNytUxV7cn7l2eots7YbmSF5r7zPvseclzXksglIoG49GeeUdhTGlEDWdAN6M8N5IFSFX1guC4MgadwSz6XjaDpri0Qo3u3KDO4Jsno0cQDcMy6Q0Q6lc9V5MGnABzmCzFlHUpV5iDbZ8mpii8jFBE/6C/B5K7gNyzaC5F3xcKcCHbLe750DnacrmGtIzD2euBXUxeiAQb9vfMKu+esG/PSJCSVmUleI0+A8Jq4X4antt8nrcAE+O2gE2+FfI5pNS07/a7hhdZ4IrfWMvAdujzshZqRM+x6qhaHKAzC8rpBAjePNEfl7wE2CFXnrl1mCxLn/vm6b/pShi0yIY3bdKfeB8AtjEiKfYjyWPr2Vdb20pRjj7uu4jykGdUp2zMgz/ZkJWxR/oBIERpPywvPb4F58NqnSOGkUzu7cOJHnA1LfkzGo13rvgHIuOoKU45GLIlCb2JyQon3/MMIqgK8fYM0YFOdVnchcgy3quId633Icro1+udwKJSOWdal9MEvL6bincrV0yigwsGZ2v8SWZG/uAEw1lBN+CJQAlWniz7qb5Jfi3ktiy0ifUG8SxJSN6eiqQY5eOsH90Prw7GKuYw7alU5JFZMFoIBn2+d51YrVJrACLu754TmYffXLqy8z7We8XByvV6n4Q57VtyZZy8dTmVf2E5p5LQYXRAVe7cNenZ8JkauIbyDD51oOMnbkwjPf8bB5xsQp9ydjagDvjAuM3pmN1cRoPvcytIBWPjGTJ7tF6lDRDG8z9tslaeUSarjmwDSeRrZnWJ73732JNilWPZzw/iWj5H4WoYywbZKkDn/swBzfq7NZ9j2uyhKB4fT0lbxbXIzpvnS9DUo4nl9AcZs8Mcoawz0DlOOOBdAme+oFqtzctHo0BXM/4oBBdFN3n7HpfOY0t1ZNynjecke8cRLBGzUqmWMzlgkxt0yoPajzLVFTPtOpdiltuNPLHtMhs8KanMqKqci5ioBRmlRmBWuXGFBk5cAU5/zFlO+XD0NnALE+kMZBN4KojSfS/9ByBorQXxfeEC6BQS7aHM2x7jI8IwOV3QoB6h8/ePrWqg6DpybI195P5VF8L8ZXyn9zLxM5EogP6b7CKL5qxdaFp//ouR4yF7V4Lx0Id1FndgkiYdNIYWtRM6EBXh5YfzHHoO2AkCv1ATb6ODOjbSmTwZBvNcEthCRPnQ13K2rIOCpXWvIIrK+F91AlWhxzNdIogQ9Y3iA1cwStzCsM7YC4NFfnK+btWasA7DqIy5aG64mOVBoT1anEHjokhA028qdAIP9EEotBeIMN4yQ6OS/AQXV6PHyDeAKHOu0x6PlQLXVkhBEtIjzFpcx3csngNMUCMGeWwabG8398E0c4aTh3CH0578vqZoNbVuJ1f1ETkUCbVPSN2nW0HoQUz9mC3N9R5pBsyh7SszOLnVaWGOQ/jgnWgQs1PCXy6WwYKbXF4ZEliUHpzkpjukQRI8gMbYwwCrGNdo1hrF66IWQcO2AgHappBepMAXXWgt6xA41OsoCejqNKvXnF6m2svJ0ZZj323vLUn1FN1WNe04Drdo4C7Rp6l0Es5vPWzcEtayEr9u1I9y7/u80VfdcBuZTc6x27Y3cVrRxzOBGEQIz849/zI5x7hyDfkCG+ThBnX6uSzfOZ8Et4f1DbBAyuWOPWy/LWcPfKX314pplr4mtaJW30TM9uCT10LPuuAVbY0eIQK5yHab4jUrjtZ2eShZ8XORqpq4i20mHuqJTnpAVt6aTjXQz/LBuwjlPM/LeimDQzIGZkEWjkP5UQMsArWFozIgXZO+H83MTeoaQ7Z36NXe7LEC91MnZtiTIJ+gqCbZqq8lA+U/4vJfL3IXheCDcHGLIcqVZnBuMlgqvyFIWv//iw2wiX3sk9QHVNO+l5+tjno6u8QjPC49opg+fSRqE4zIEuHLsfCyKwD4h04lg5dbqtZwReTw9u7SfrJZI9CTIBDHibgTog3CNllIlw5NHkkHX74JpGpO1xB0qAKpF7zNQmzsljm5gNUdwn9SgiwCzYpwuuJSCvv6mq3mhAp4+HZSVLnuleCfRNJ3+TDOxe/CBghqbaNKnCSyMXrlV/v8aQSm8wT+WfXJhWVdEcyi4DykucZ74NvmQCQ6/IAFV0hoot7CcG3qvr/rzJfRlDJWwO3NVsoiGgwu6ZHo6S5bzcYUjZHwhGtZLPRKOIDGV0oWnOc9dJ+iu4i1rFMbD72FghCtjznkEYZCCWSbBQB4SQsSbkC4Ffi39JV4usEoUDl3Y1+5n+MBme7jGuj6exeTaUIOS72f91rt5Sv6vnlc2s77T435c/GtJ1LYgkMMwAbJH88XkAJCNTgfQ0dJJnYLlJHT+ju0VFwVgWFlWkUREL8OxUlNY+Sq3Vw7+AVQUNCT5qSYKPKBRFO7BQDGhw5fy1ddyWREROhrZv0tPKdbBkL1Gpiikbg4K1im2/B9iyxcy96B8ZlJfYA2frlDv8k8rR5qIeRc8KPORHZ3sJL8mFgF44JG4TMsHc7vJnxzqdkbaaU3eUaWtOiIzlCWdEJkP+beDKidydc03gNOU9P2tg0j00CBr7NatD03i38nVE591TUPzsUdE3Sgv+JSh6KOCJtrBmoN3cozvM3bFn+w4VakgqGC0OCDmojuz1nwOxI4obhFR1gpXwNKRvDqrHEDiq6/FCb9ZtEhvBFhl3nnw8sHGaRIYGQdI+KPFuv3ikcMXGBbbV4319nw7JP52FI46a4bXDUhDdTVXI/0AB7XY6HAoBaUT4KDhk+cxDXy8senj6U5b3He8wJs6PBMu8iWgPGbhMG8WxkZWAO9OFIwKKfrB9K+bfGuIculeZMHp4lZoHhmshWa4hPrny2sgywIExLTiKuXdm5SoJY+U7vFSerODIhXR1nfL96/gy8OrQQk8uVqCckGfpjDKyamL+B185kE+6kl5Q8waAg+orUR0fYbEjCfEc5xKc59w+MtIMhBNdj+2xy/iOCp10T+PO/YRttuJoO0wssU6fafI8bhiyO9rq189fEstvXyrQQWoUQFNioJ004A+c4qHLIIJZVgzm+jsrD0wBPwJcxUXqZHPMlIig96aQpCm0lUtNfoTNUmzKySiRr49H0bjdT3cnkbqTBW5uKHsGBlvVNBehhYYbUFLC1LnRapYf0prEP56E8F2LuZha4xteZOru+e3vHh7I/nhQOcSTBsGX2Io1yythvcYcU0ri35gz/baqOvJvqIi5esSCxFJsGXRyP+SpBER46MMG0JLZCGTbOpmlTsgqsT/Ch01Pk3P1P4dgbJPpmhXn87lBfEVz3knM2krtK/kxCyyxd83thLmOz1WXBIQB2jb2EsBHE+gXaPPHh7KQJJejlGekS/ITARr5gxCc14zyGFDRTBoyjC8sYmUiqWGfXiii3RIGKsjgn+HZ7sBSzOy2caLxmWgv1YFMIFUAFAKxao01QRTT57ZnJH4vTufdlvfBXg9Ix+gOBHdcmgDk3YoBEFrJGPvwIk24chUYa6thJ2SqREw24YiBmaUl+kkxPpDyr1UDy3BFGb2ZNO1baUD7fl+ExZZ32KPKet6cXer5DCvYB4WHCKN9+HpPuq2AZ76r7z/DnSDo5sAZWyPZAFtmNGS8d0n1HYYEZRHVVUs8N+rPLXNKZTuDAUZOC8ePWRDfT6pMRKX0OuIWoiGfy8AQDSv+mPalp5SB9u7R/jA9IhsxK2Y8AVNr0Ifst343iVxby6GsOqrfSVQvFkQv03hY0caVSr0GH5XyXKP+VzOvt2FvEPcQ6HYPFMz4aav/hHOEbYHw1qpRYIJcbB2uoVugemXvLzWnLyxQvoo3Ot3g5o5wdNveIgzTvATKsBzT1S64sQ2L2jIXA2Vpz0vVA3BTVwbDZrOql98pDjcJ/OlGscQdPdTIXrhx2Xfxdw86sjQE8Hh4qTN57FjjNF8KcgyDEIZ3ZAskuRj4OVh7gKDLP4Ns/gYYiGWMpRuiCBLuzLPADuh+Tz34qb1HsSjNBT6Wwd5/qweCnfmMacfwDfwIWieCdJRsyg9ig2Mp/RzajTttQbPn+ZaAuLjvm+N8mRA/a0vHqRURsGIOkhUh5fImQ0Mz9dDcGy4PDBRU+GP5MeehyZ7sbZ53Nvl8+OMfjF+7lkphJYHMl/tweFDEJ3aT6ZnPEQ1QoZB7smt1ebjssjz8s5YwsUuC3MJTo/BSzgOqAxdf5/hyqX6jJ5TDnE+0+Ds/weRa6Hot2e2Qoxd5nxy/+4yJNmGqBZni2M7DTQpLj7KhZOBdodJBgG0JjdVgvpM09v9E9l/vC45f2JrvPpxDlwPHVGuJXtFpMTR8vt5XaGB6Xc+fKk/m8jsojvaKCxIizSmbv53fB9XbqxqXfVeh2TNQq93J/+7XNN8aHUNnSftXjtFfR2Gbe0f1JeEy++KjlnLy5SUpOq0mzp6qVNNQy4WyiO/NYKk2rrUBzXb284d42z7hW5XuT2Jc+Nc6W7/+BVDidUDZmA/FYD/VfAFlLBbK/d/N4OlShxklzAcJNKPg0GVTfA4ZAge8dUUb00b4gtY2/VQzkD1Qzk+DPU7XX0OvYwhKHeaTHSM6pQ7VgJBCPbHKmp9/iZFnsAYE7ghzS/TCgs/SuPxwIIM+sUr3H7RF9ko4UNZENZQ8aFyYzSFETPf/4o4poOVQGQw9wuMrbhTajwHGc8Up2Hr4TnoIsdFrk0qzk6uX7xMTpIGa/98IhOwPPgf6iBC07yp86vczvv5H+lyQ4tF/2rhXarEGHcHDACyfFHX7mR+3Y6JY/AGDqrbL48BOa/r2bQxmnBg1/chB/3ICYPXG8lZvzv+NyRneIBdJJPHck/fQ1Paj465LBdd2U0JldcVb+li4qWi6ffC+unAWWJKVZ0yRnYkOFrzh0csgvwwQTC2Lypk9iG6wDifBZut8X67PBpVaekLVPsBYj1VNq9DjCPtaI771X0jgHHJ/GG81I/RkcWXKNR9CxoxfWjFHBFtRZz1ULLzkYIRySNq0n66bHGQT0an2XOVkwxEUoqptT33055cxNBAvukNiPoh2DLVx67zyUsbYcTVwObPqRgBaQF9z3CDMfrCPdzxXxPJ7UNhEdOyYFkvwBE1ZkisLpN28sqDCyJF310/dIHuRR50LssXnYTxWBLqSAIBdT6S+TFoWW5pxO2/6vyzugoPP26l77NWCoM70m0P4gNTRosXEC/AkJRqyQEEnNxH8BHegRajV3i1C4wKKLeRmYr5Pq1F9WeP5U/gW6UByeVWZKezz9pTDK8hl7gaHDRe/uQrCbCb1iRM1XSb+RmMnYUk2qVg5J1kwe1hMxhLGYgkxazH8f0HgjFZlmXmiB037ED5jmS53Yt5H44WZDOsmHaV5xFMa8RwqfTLBXfu1ImHBYQZyNf+5TlggcmBOLuEaAXQV+gNc1e1H/UoysqRBRTi7oi3HOr5okqvmkgsA1xlEA9dUOwMiVTAQ5jWmbs5BdRLyoUQnEMPgRtPKXYflsp9sDZcEPMdN6v0MoLsAwU4z08IuZCDq5O84H7VX3B6UDfnRQ/+f2Vi4r4AcuGwQse74aOKpqrEWOwwFosYV4Eypb848jg2UaONCWmQnNDVcNdJexbo36JLnbOtKy+y6hIH5KAbw9WnNqERCduSDD5wmibQQKIC+3cAqenQnoPuCUGMUgDKCQK+deB8UedsJvbRrRdNAiswTvaD6f/XLDSfkJKnHslh/rt9TZHwgarHmPICUtFOmp2M8jZWpS/xH4JBT3yyT5ewHM/bPm6bqRkJewJsEpJ15xdsoMxX3SqPKBLy0bHxZgLHZHyKLcNIQhXUVwnyn4r9D9lOF082S5Rv7Kv1KAGv045NwV2DhV/KNI1OSH6b/DhXqv5Oqa8BiGEppYctFA1lgDXE93TyBaWymPEUwn/jCWAwVkOSKeyibNqcyC4/a7xiuGHaBAx0kKMOZlbG71Ra0LyWdjMhog/elrXhTeR/wx5Tfv/d+/nCmf99OwzjTcy7yyZ2B8FoXBvMKuoy03llDacgSlfuQKznqvWC3XXFr/RFQgsrMiFyZoYhVUZq1gIKICwctMOQjdDrr74oATjwImsGkyqrFmjpVP+WIVSaAhSDkH0E1ijmNiZrDAZYfH2pEZ6VHSB/7iz+qFdjdD7oj1/NMVVnsxcT8Q1B/TSOhCm42jMRLQQTBAGLTAb14hIJxjLJSm9FhzFOG8Nv7gVcp4Ni+CBfPC3LfceP2XDmMob3Ef1XT/CH71fmalVTbET5FgPAioiM4qH6n9j7ueKESBAp0bS3Wx9yqyAY901bbIoAx6JrudAOcY9BwY71oF5wpcE2hOM1Tp6LKK0WO7zdxnq0IyQBT2cton+XFOIcQDSVHVmz6/+X8JUeaOnXXApMK0wlgbdKDdL0G2gs1UYP41kb0bgkU8A/qqHOLAyEO+FiwV17ajziyWgR90oEPqLiOs0j507qIdi26Tjl+iDvfOR/9SD6nSikAsOL5Nd7z4H+xOU74guzIKh2/5ALTwFyfZ4seoJ9VkycCNmGXzN2FEZIl/yb29mDLviiK+K5MnnA+qoVS9nuHbg/4ijrQXdJDgb/GHrsXJ7GDevwOSasWa5hR/MdkkMFJS+BLBZzARJ2rQ0lxbjBriOCGO3e0WiW4hA92FNHcB8oKW1+v/k4cUYCoD/0NLOi0BbZ/a0LKRqjNsYWIk6IL3AkCEXRfCyvaf2gf8K7c/DqO/uALiPkm+7qwty5oAV5Yu2OT3bxgZ5ha78/ZnZWdFWCgbk7PEq6dzO18csJNPV2xtqNqMoMM3r3e45WIe+qycOAMtPS9pH/U6o1r6iJuY+qaGJSZHe0qYEPvhkKbgKqds8UWAW5fVAjKj+Q2MbGS7ZdTjOm91v40kGSjv9WBlR5iF481KpgA/Tuh+Fk+3uB7fPMTjzBR5amAwa10qfDyzu0S6+2CZFJzCK11dNWP/G80aODq7XS8pvkuKXMz6ulH0vLIb8P1Xq5CVZu0Qq8V0Miy1KVrOZ2T9aZxr2+rIAO+dPfQQewAXaV8/VT4/CF/S1KeJzsUWEAzLbX5qxX9/E2UV6HUa5vxYcDmEN1j7ZNr5BjYQq36hiZ9J3/lklCwoGnVApbjBhD2IiG0hq8bx/UJOvrTI0TKlDlR43kM0T85QOxs1UPhXEGXa6lEjgT1RS54Hbu03EcJZlQLTgpsXuVHdnTY8Lrk+u+ID/ceTCwVF+To/Pz5RdyahMPOnlRS3HwHr5P0Tzv06j5/0DdrzEShDWadQrpB+fqWFkj43x+u4Pryssmso05eeR/BndX2LecX0FhmOWkWCdVlNagiHZy7M5jkVuUwuGgc7UTyCj3dL4Xthp/hOAf0KSYnBm8/J90DL3A4YfURPFrpQpgytQn7DNUzGgjNuj8MrLL0EUDc0Lz3nUSmlhDalhZ7T6MhrZATTfPLc2ak8DdfeWGu1WUJNZcRFLYCt1UK2sjeeEf1NFBFPNrWDmFD+QHP1p9irB35/eQOQFkdt3Gqw/Kxuu6xt6HzHSLutlrWGJ7vhihprORfbzg7gtiEMISxmak4L7jtU/lr6IZv0oL+VLe5j8+V/BGyy8UKT0mdGAzHggtpSmVNTFlJyQUc6FnudAE2jWr1xay3XXbip952Reva60JX4sgWebxmWgTRFfwpsyEzO47wPtvuvpoixwYnP6OLs+0gkde2zxAveQmTQLr2YxICAoEz4CClNXpfGKvhpdEe2WbkEoB1dw5f3cSw6woKmyrL4y7WBaGKs3R+LPCEVKsHOVNvh+SohF3+VC4M+4zV2hkruEUxzwcW1+fboDVrRNMrBl7SiSg/S6z5hp5phMWWJeaNPig71s6jmBkQguwsLlArqsWbWInSoJt05ruVJ8Gjw4wYQsXt83OejPiorLEaUdwDmiqgpS1tJGZrv8R67tRGfN26QZuuh32xS/42hGxLTjJ1FUWlZMrd32LRxG86uvOeq8IIx7ymdbaYR6G+wWqz6UtgqSGv0yy23hayUP9bhEJGoJ34XkocgVETnwaItKDynxJ2hsc45VNPpmeerMao/IZouJzrE4xtBVRai5cEwq+fD5bfEzKFJobEdsf7JASLFmZPw8h13BwyYmgCHW7HZ6zAB/VA7QRvt7Bhh53nskKQl9ZwHf3ZoPiF01/CwDxyckuZDZMkb4j8jl6Pq9cZcvzsrHAmjYdO4cWtZr+IH72mFFXqPL4zW+hdpu/OCDXPvSbGc8/KJsXjc3TZEgiQ8Nmzeg9+2MnNE1Yfceb273tGSLuc9DxBoTDL/5j01pofZRB0jp4DPo5zom6ay5k/+yravJRaBssA5vC/UqCPIvyeiUs+flkmcZ1MN2WafFb5UMYpr0bExn+cP0Ow2CKP9fPTCk/ee+6e9jFysObsoKcQ8LpmimxlQ3FxT0C5x+e6pcuGDDkNaJ+0HHE9DmIgJDTkk+awEdfDy6cl/vA3h+oRAVZQgIcEy+0pcQtvtdkRDUDuxvZyJGyoxoYS25B1WXfFMQYTDa3E3S0Q5vr4ZQJar7Qf8il2GWzbVF29DxQPPIhF3XqoGw1hUbmYDe5beH+mSFO1DvLXi0mLD3MozK1AU5Gkb+W+mfSs+q0qcZjzxEE9zQVOOO79gq9N135lUEhU9yC3HhP3rYYaKLNSj6sYSz1WizenKLEZb8CzZaYs13JQmDp6zCo/Qn0SYLjzX0L20uZHcDG6fgZzauRucRvAO33XPy7y642cSx4eg6SJlLOmZ4o43Br2iPblhQsMOWaVHqgF4B9uCCiM4xVFU3qE+GVf4imK6Fc59bjBMFGYC+0VVzgm4V1nrrJe1UgZUq0Z5Opn/Z04uv69gxOPcFO+Oc2Q580OZGzNyHidLT37JSu9tEI6Vd32v+I16MxXSr/Iagmhz4Zn2JNf91TghtCs4emxsmIr6hEWnY0UJcs0GB39NzvloDsB8Aqebcqd30LQApTlQl5/8UmsHJK9rSyxujEpRNj6r7RO5Sf13kGCO2rb2lAmaJIoDJdTVVqnmR6a2wStELAHvvGC40T9xjUvvIb+p+z4q26EQuocPKVAyXu4FIisumzuzL93VeIDNVAA16s5l6L18BCvy2GkP9L9FHjjyP++KkUjK34l8M2IXc9999euFbkSqtlEqX09bIpWaze0dtGWmrd+E2d5dsqxFtfeagUSBwzxl+E/5igkBbLVOiQU8tFuV+nw0yNHJxG2xPhy7wzkxCWsX1X2lCEF25RXARJc83C6j/GioCOzvdS/hTP+oQFl+p9RRwN77EK3JGTG2VgcuCrRV9jXOj7OucPzOIL7X+OgBV5DmcW76IvGyfajAi9sGTKu1wSkuvQlfS4InrGSzsifaZMI6j+pkSeZZIMPK+kvIoCLNwiUqN2pM001ljzM0wWIQK+DY5DT3PLZRmca1EKhONUPigKTkeQ3UyyrDTXDOo4YMdl5BTBY7Ma0hiYBYcKkgHFT3pQ8W1QHQTK2xmXb0LkbUPjFImm9EUwrxhFZt/W3hHSth2JD16hleJJnXT0caQFVB5IwIyWWGUSBCkqDy6bY9nEP3KgURH7z7lJWlUB1aYss2eHc32Q5pB5yfrtn18lJWlL//YmXdVfOF8EXpvuSMIxTtRF8kcqCD2fnvVAJBda0dScGypQh66x8m/erq0FbYD8BQSz21EN1nFfGkzS0t3nsuOz67gWL6gJvvVIj7Xxt2MhvTaRn40A1JAyobumnVDa3xqHs1NpcLMKudiM6FUroWafAe4WengIVse5d3nSJV99eth1eo582cYiPCwPjWxrrl5frtNxiwJCMlvdg0N8mwkX+BcllUknwGoVdPIx1h58E4XPNQ+o8LXgHgJwocD2Xxu0FRalb8G8G/WL3KD12wkGFVb3CeufepyIhdsYTfCeRpZg2KOIRhK04nNac7hcPQlxUIQJer/MFP/E+rI252Ku+SCND5KWdxXv0mtIcmXGDzef206osQ0doh8K8ZOFUodcnFhhXHibe7XFs+IFjFg2LBCPty2d+0uix4LStpQPAfNM2Y8jnyBEbOvAP10BrJWDGTBZilza8+9+ie1Vzc6GTps+EeF/Dg0xrUwN4oCZiDZnBduLdEaH6z+ucSl3celOkWnioS6U3JLVObps+0PSBQfWSrOTJm651gy9glx8DI/dRf680uyTBSwo3LMmL15OwQDy8HlVtQ8sByEDTC6cnGpfQFh/mLjvpSVaQ455HmIM0T0tLldyiyA08WdArYGc+d+eSsO++QYEABVmgpGq0FQ==</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>PASSWORD REQUIRED</h1>
+        <p>write out</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
 </div>
-<p>つまり，曲げモーメントの変化率が剪断力，剪断力の変化率がマイナスの荷重強度である．</p>
-<h3 id="_3">オイラー・ベルヌーイの静的梁方程式<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
-<p>\eqref{eq:bending_moment}からオイラー・ベルヌーイの静的梁方程式は</p>
-<div class="arithmatex">\[\begin{align}
-\rightarrow q &amp;\approx EI \frac{d^4 y}{dx^4}
-\end{align}\]</div>
-<details>
-<summary>考え方</summary>
-\begin{align*}
-\rightarrow M &amp;= \frac{EI}{\rho}\\
-\rightarrow \frac{d^2M}{dx^2} &amp;= \frac{d^2}{dx^2}\left(\frac{EI}{\rho}\right)\\
-\rightarrow -q &amp;= \frac{d^2}{dx^2}\left(\frac{EI}{\rho}\right)\\
-\rightarrow -q &amp;= \frac{d^2}{dx^2}\left(\frac{EI}{\rho}\right)\\
-\rightarrow q &amp;= \frac{d^2}{dx^2}\left(EI \frac{\dfrac{d^2 y}{d x^2}}{\left(1+\left(\dfrac{dy}{dx}\right)^2\right)^{\frac{3}{2}}} \right)\\
-\rightarrow q &amp;\approx EI \frac{d^4 y}{dx^4}
-\end{align*}
-</details>
 
-<h3 id="_4">オイラー・ベルヌーイの動的梁方程式<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
-<p>静的な梁の方程式に，慣性力を加えることで，動的な梁の方程式を得ることができる．<span class="arithmatex">\(\mu\)</span>は単位長さあたりの質量，<span class="arithmatex">\(q\)</span>は単位長さあたりの外力とする．</p>
-<div class="arithmatex">\[\begin{equation}
-\rightarrow -\mu \frac{\partial^2 y}{\partial t^2} + q = EI \frac{\partial^4 y}{\partial x^4}
-\end{equation}\]</div>
-<p><span class="arithmatex">\(y=y_s+y_d\)</span>と分解する．<span class="arithmatex">\(y_s=y_s(x)\)</span>は静的な変位，<span class="arithmatex">\(y_d=y_d(x,t)\)</span>は静的な変位からのずれであり，動的なものである．</p>
-<div class="arithmatex">\[\begin{align}
-\rightarrow \frac{\partial^4 y_d}{\partial x^4} + \frac{\mu}{EI} \frac{\partial^2 y_d}{\partial t^2} &amp;= 0
-\end{align}\]</div>
-<details>
-<summary>考え方</summary>
-\begin{align*}
-\rightarrow -\mu \frac{\partial^2 (y_s+y_d)}{\partial t^2} + q &amp;= EI \frac{\partial^4 (y_s+y_d)}{\partial x^4}\\
-\rightarrow -\mu \frac{\partial^2 y_s}{\partial t^2} -\mu \frac{\partial^2 y_d}{\partial t^2} + q &amp;= EI \frac{\partial^4 y_s}{\partial x^4} + EI \frac{\partial^4 y_d}{\partial x^4}\\
-\rightarrow -\mu \frac{\partial^2 y_d}{\partial t^2} &amp;= EI \frac{\partial^4 y_d}{\partial x^4}\\
-\rightarrow \frac{\partial^4 y_d}{\partial x^4} + \frac{\mu}{EI} \frac{\partial^2 y_d}{\partial t^2} &amp;= 0
-\end{align*}
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "thesis/Euler_Bernoulli_beam_theory/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["h3vPNjUMstd7rl1jCCMc4g==;hlMpNwS92Y/clfbbBgrT5eeLTKykYYqHCWuD7eW+JUk8loMpHVgRowM6zc5JyRx+i89BRmGWavw8O8gD36QNwSmyIilSpUlUsiB+M9EUqZzBgRpqy15tht+L8kbmXwoj;gU7PlOQCPgLIp1qjpH+VTg=="];
+var encryptcontent_obfuscate = 0;
 
-途中で，$-\mu \frac{\partial^2 y_s}{\partial t^2} + q = EI \frac{\partial^4 y_s}{\partial x^4}$と$\frac{\partial^4 y_s}{\partial x^4}=0$を使った．これは，$y_d$という静的な変位からのずれを表す変位を表す偏微分方程式である．これ以降は，梁を縦に立てたときの変位を考えるので，釣り合いの変位$y_s=0$なので，$y_d$だけを考えることになる．ただし，一般的には，$y_s$についても解く必要があるだろう．
-
-</details>
-
-<h2 id="_5">オイラー・ベルヌーイの動的梁方程式の解法<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
-<p>動的梁方程式を簡単に書くために，<span class="arithmatex">\(\lambda^2 = \frac{\mu}{EI}\)</span>とする．</p>
-<div class="arithmatex">\[\begin{equation}
-\frac{\partial^4 y}{\partial x^4} + \lambda^2\frac{\partial^2 y}{\partial t^2} = 0
-\end{equation}\]</div>
-<p>偏微分方程式を解く方法の基本戦略は，<strong>方程式を常微分方程式に変換する</strong>ことである．方程式の形から考えて<strong>変数分離法</strong>がうまくいきそうである．<span class="arithmatex">\(y(x,t) = X(x)T(t)\)</span>と変数分離し，元の方程式に代入すると，</p>
-<div class="arithmatex">\[\begin{align}
-\rightarrow T X'''' &amp;= -\lambda^2 XT''\\
-\rightarrow \frac{X''''}{X} &amp;= -\lambda^2 \frac{T''}{T} = \beta^4
-\end{align}\]</div>
-<p>このあとの計算を綺麗に整理するために，両辺を<span class="arithmatex">\(\beta^4\)</span>だとした．また，<span class="arithmatex">\(T''\)</span>は<span class="arithmatex">\(\frac{\partial^2 T}{\partial t^2}\)</span>を表す．こうして，変数分離法によって，もともと１つだった偏微分方程式を２つの常微分方程式に分解することができた．</p>
-<div class="arithmatex">\[\begin{equation}
-\frac{d^4 X}{d x^4} =\beta^4 X,\quad \frac{d ^2 T}{d t^2} = - \frac{\beta^4}{\lambda^2} T
-\end{equation}\]</div>
-<h4 id="_6">一般解<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
-<p>まずは，<span class="arithmatex">\(\frac{d ^2 T}{d t^2} + \omega^2T = 0\,,\omega=\frac{\beta^2}{\lambda}\)</span>から考える．この式の一般解は，</p>
-<div class="arithmatex">\[\begin{equation}
-T(t) = A \cos(\omega t) + B \sin(\omega t)
-\end{equation}\]</div>
-<p>次に，<span class="arithmatex">\(\frac{d ^4 X}{d t^4} = X\)</span>の一般解を考える．線形の方程式であるので，重ね合わせの原理によって，異なる解の線形結合もまた解であり，各々に係数をかけて足し合わせることで，一般解を得ることができる．<span class="arithmatex">\(X=\exp(p x)\)</span>として代入すると，<span class="arithmatex">\(p=\pm i \beta, \pm \beta\)</span>の４つの解が得られる．このことから，一般解は，</p>
-<div class="arithmatex">\[\begin{equation}
-X(x) = D_1 e^{\beta x} + D_2 e^{-\beta x} + D_3 e^{i\beta x} + D_4 e^{-i\beta x}
-\end{equation}\]</div>
-<p>これは書き換えずにこのままの形を保ち，境界条件から係数を求めていくことにする．</p>
-<h4 id="_7">境界条件<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
-<p>境界条件は，固定端と自由端を持つ場合を考える．固定端は<span class="arithmatex">\(x=0\)</span>，自由端は<span class="arithmatex">\(x=\ell\)</span>とする．固定端では，変位<span class="arithmatex">\(y\)</span>と曲げモーメントがゼロになる．</p>
-<p><a href="../../items/%E6%9B%B2%E3%81%91%E3%82%99%E6%8C%AF%E5%8B%95%E3%81%AE%E5%9F%BA%E6%9C%AC%E5%BC%8F.nb">cable/曲げ振動の基本式.nb</a></p>
-<figure>
-    <img alt="梁の曲がりの時間変化" src="../../items/hari_sindou.gif" width="90%">
-    <figcaption>梁の曲がりの時間変化</figcaption>
-</figure>
-<h2 id="_8">もう少し複雑な問題<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
-<p>静的な変位がゼロではない場合を考える．上部端点に変位に比例する外力が加わる場合を考える．</p>
-<div class="arithmatex">\[\begin{align}
-\rightarrow -\mu \frac{\partial^2 (y_s+y_d)}{\partial t^2} + k(y_s+y_d-y_0) &amp;= EI \frac{\partial^4 (y_s+y_d)}{\partial x^4}\\
-\rightarrow -\mu \frac{\partial^2 y_s}{\partial t^2} -\mu \frac{\partial^2 y_d}{\partial t^2} + k(y_s+y_d-y_0) &amp;= EI \frac{\partial^4 y_s}{\partial x^4} + EI \frac{\partial^4 y_d}{\partial x^4}
-\end{align}\]</div>
-<p>静的な変位<span class="arithmatex">\(y_s\)</span>は次を満たすとする．</p>
-<div class="arithmatex">\[\begin{equation}
-k(y_s-y_0) = EI \frac{\partial^4 y_s}{\partial x^4},\quad\frac{\partial^2 y_s}{\partial t^2} = 0
-\end{equation}\]</div>
-<p>そうすると，<span class="arithmatex">\(y_d\)</span>に関する方程式は，</p>
-<div class="arithmatex">\[\begin{equation}
--\mu \frac{\partial^2 y_d}{\partial t^2} + k y_d = EI \frac{\partial^4 y_d}{\partial x^4}
-\end{equation}\]</div>
-<h3 id="_9">非線形振動への拡張<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3></div>
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
 
 
 
