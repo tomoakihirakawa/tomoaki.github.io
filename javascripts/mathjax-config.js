@@ -2,10 +2,14 @@ window.MathJax = {
     tex: {
         tags: 'ams',
         inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        macros: {
+            Re: "\\operatorname{Re}",
+            Im: "\\operatorname{Im}"
+        }
     }
 };
-
+  
 /* -------------------------------------------------------------------------- */
 
 // window.MathJax = {
